@@ -19,9 +19,10 @@ Class RouteInitializer
             return $response;
         });
 
-        $app->get('/users', [UserController::class, 'getUsers']
-        );
-        $app->get('/users/:id', [UserController::class, 'getUserById']
-        );
+        $app->group('/users', function (App $app) {
+            $app->get('', [UserController::class, 'getUsers']);
+            $app->get('/:id', [UserController::class, 'getUserById']);
+        });
+
     }
 }
