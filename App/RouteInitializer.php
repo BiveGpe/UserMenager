@@ -1,18 +1,29 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace App;
 
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Message\ServerRequestInterface as Request;
-use Slim\App;
+use Controller\UserController;
+use Slim\Http\Response;
+use Slim\Http\ServerRequest;
+use Slim\Routing\RouteCollectorProxy as App;
 
 Class RouteInitializer
 {
-    static public function init(App $app)
+    static public function init(App $app): void
     {
-        $app->get('/', function (Request $request, Response $response, $args) {
+        // Ping
+        $app->get('/', function (ServerRequest $request, Response $response, $args) {
             $response->getBody()->write("Chuj");
+
             return $response;
         });
+
+        $app->group('/users', function (App $app) {
+            $app->get('', [UserController::class, 'getUsers']);
+            $app->get('/:id', [UserController::class, 'getUserById']);
+        });
+
     }
 }
