@@ -2,17 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Controller;
+namespace App\Controllers;
 
-use Slim\Http\ServerRequest;
 use Slim\Http\Response;
+use Slim\Http\ServerRequest;
+
 
 class UserController
 {
     public function getUserById(ServerRequest $request, Response $response): Response
     {
         $queryParams = $request->getQueryParams();
-        $name = $queryParams['name'];
+        $name = $queryParams['id'];
 
         $dataToReturn = [
             '1' => [

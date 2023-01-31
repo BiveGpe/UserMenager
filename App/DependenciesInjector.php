@@ -10,6 +10,5 @@ class DependenciesInjector
 {
     static public function init(ContainerInterface $container): void
     {
-        print_r($container);
     }
 }

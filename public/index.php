@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+ini_set('display_errors',"1");
 
 use App\DependenciesInjector;
 use App\RouteInitializer;
@@ -12,6 +13,6 @@ require __DIR__ . '/../vendor/autoload.php';
 $app = AppFactory::create();
 
 RouteInitializer::init($app);
-DependenciesInjector::init($app->getContainer());
+//DependenciesInjector::init($app->getContainer());
 
 $app->run();
