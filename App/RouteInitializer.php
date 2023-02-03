@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace App;
 
-use App\Controllers\UserController;
+use App\Controller\UserController;
 use Slim\Http\Response;
 use Slim\Http\ServerRequest;
 use Slim\Routing\RouteCollectorProxy as App;

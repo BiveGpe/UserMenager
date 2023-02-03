@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use App\DependenciesInjector;
 use App\RouteInitializer;
 use Slim\Factory\AppFactory;
 
