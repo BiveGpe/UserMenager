@@ -12,6 +12,6 @@ require __DIR__ . '/../vendor/autoload.php';
 $app = AppFactory::create();
 
 RouteInitializer::init($app);
-DependenciesInjector::init($app->getContainer());
+//DependenciesInjector::init($app->getContainer());
 
 $app->run();
