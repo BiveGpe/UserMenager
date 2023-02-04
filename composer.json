@@ -3,7 +3,8 @@
         "slim/slim": "4.*",
         "slim/http": "^1.3",
         "nyholm/psr7": "^1.5",
-        "nyholm/psr7-server": "^1.0"
+        "nyholm/psr7-server": "^1.0",
+        "ext-xdebug": "*"
     },
     "autoload": {
         "psr-4": {
