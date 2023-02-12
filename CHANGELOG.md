@@ -1,3 +1,6 @@
+### v0.1.2 ###
+* Adds Php-di
+
 ### v0.1.1 ###
 * Adds xDebug
 

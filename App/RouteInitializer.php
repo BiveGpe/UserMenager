@@ -14,7 +14,7 @@ Class RouteInitializer
     static public function init(App $app): void
     {
         // Ping
-        $app->get('/', function (ServerRequest $request, Response $response, $args) {
+        $app->get('/', function (ServerRequest $request, Response $response) {
             $response->getBody()->write("Ping");
 
             return $response;

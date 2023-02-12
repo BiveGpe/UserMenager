@@ -3,12 +3,12 @@
 declare(strict_types=1);
 
 use App\RouteInitializer;
-use Slim\Factory\AppFactory;
+use DI\Bridge\Slim\Bridge;
 
 require __DIR__ . '/../vendor/autoload.php';
 
 // Creating app instance
-$app = AppFactory::create();
+$app = Bridge::create();
 
 RouteInitializer::init($app);
 //DependenciesInjector::init($app->getContainer());
