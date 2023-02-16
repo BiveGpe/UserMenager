@@ -12,7 +12,8 @@ class UserController
 {
     public function getUserById(ServerRequest $request, Response $response): Response
     {
-        $request->withAttribute(Category::USER, new Category('User'));
+        $request = $request->withAttribute(Category::USER, new Category('User'));
+
         $queryParams = $request->getQueryParams();
         $name = $queryParams['id'];
 
