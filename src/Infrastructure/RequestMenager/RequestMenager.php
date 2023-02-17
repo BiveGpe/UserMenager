@@ -2,10 +2,19 @@
 
 namespace Infrastructure\RequestMenager;
 
+use Slim\Http\ServerRequest;
+
 class RequestMenager
 {
-    public function manageRequest()
-    {
+    private Config $config;
 
+    public function __construct(Config $configProvider)
+    {
+        $this->config = $configProvider;
+    }
+
+    public function manageRequest(ServerRequest $request): void
+    {
+        $config = $this->configProvider->getConfig($request);
     }
 }
