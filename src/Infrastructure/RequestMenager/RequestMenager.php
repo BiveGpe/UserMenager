@@ -15,6 +15,6 @@ class RequestMenager
 
     public function manageRequest(ServerRequest $request): void
     {
-        $config = $this->configProvider->getConfig($request);
+        $config = $this->config->getClasses($request);
     }
 }
