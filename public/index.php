@@ -8,6 +8,7 @@ use DI\Bridge\Slim\Bridge;
 
 require __DIR__ . '/../vendor/autoload.php';
 
+// Build container with dependecies
 $container = ContainerBuilder::buildContainer();
 
 // Creating app instance

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use Infrastructure\Common\ValueObject\Action;
 use Infrastructure\Common\ValueObject\Category;
 use Infrastructure\RequestMenager\RequestMenager;
 use Slim\Http\Response;
@@ -20,7 +21,9 @@ class UserController
 
     public function getUserById(ServerRequest $request, Response $response): Response
     {
-        $request = $request->withAttribute(Category::USER, new Category('User'));
+        $request = $request
+            ->withAttribute(Category::class, new Category(Category::USER))
+            ->withAttribute(Action::class, new Action(Action::GET_USER_BY_ID));
 
         $this->requestMenager->manageRequest($request);
 
