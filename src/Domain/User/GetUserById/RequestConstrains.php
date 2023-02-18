@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Domain\User\GetUserById;
 
-class RequestConstrains
+use Infrastructure\Common\Interfaces\RequestConstrainsInterface;
+
+class RequestConstrains implements RequestConstrainsInterface
 {
 
 }

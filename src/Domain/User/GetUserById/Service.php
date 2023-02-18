@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Domain\User\GetUserById;
 
-class Service
+use Infrastructure\Common\Interfaces\ServiceInterface;
+
+class Service implements ServiceInterface
 {
 
 }

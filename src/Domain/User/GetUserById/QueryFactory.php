@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Domain\User\GetUserById;
 
-class QueryFactory
+use Infrastructure\Common\Interfaces\CQFactoryInterface;
+
+class QueryFactory implements CQFactoryInterface
 {
 
 }

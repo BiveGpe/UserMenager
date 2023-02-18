@@ -31,7 +31,7 @@ class Config
         $this->configProvider = $configProvider;
     }
 
-    public function getClasses(ServerRequest $request): array
+    public function getClasses(ServerRequest $request): ClassStash
     {
         //TODO: own expeption with throwing when there is no category/action in config or there are missing classes
         $config = $this->configProvider->getConfig();
@@ -39,12 +39,18 @@ class Config
         $category = $request->getAttribute(Category::class)->getValue();
         $action = $request->getAttribute(Action::class)->getValue();
 
-        $classes = [];
+        $requestConstrains = new $config[$category][$action][self::REQUEST_CONSTRAINS];
+        $cqFactory = new $config[$category][$action][self::CQ_FACTORY];
+        $service = new $config[$category][$action][self::SERVICE];
+        $repository = new $config[$category][$action][self::REPOSITORY];
+        $apiDoc = new $config[$category][$action][self::API_DOC];
 
-        foreach ($config[$category][$action] as $item) {
-            $class = new $item;
-        }
-
-        return $classes;
+        return new ClassStash(
+            $requestConstrains,
+            $cqFactory,
+            $service,
+            $repository,
+            $apiDoc,
+        );
     }
 }

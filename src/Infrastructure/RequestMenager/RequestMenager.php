@@ -15,8 +15,6 @@ class RequestMenager
 
     public function manageRequest(ServerRequest $request): void
     {
-        $config = $this->config->getClasses($request);
-
-        var_dump($config);
+        $classStash = $this->config->getClasses($request);
     }
 }
