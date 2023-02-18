@@ -10,19 +10,25 @@ namespace App\Settings;
  * Expected data:
  *  Category::USER => [
  *      Action::ADD_USER => [
- *          ConfigProvider::REQUEST_CONSTRAINS => ExampleClass::class,
- *          ConfigProvider::CQ_FACTORY => ExampleClass::class,
- *          ConfigProvider::SERVICE => ExampleClass::class,
- *          ConfigProvider::REPOSITORY => ExampleClass::class,
- *          ConfigProvider::RESPONSE_CONSTRAINS => ExampleClass::class,
- *          ConfigProvider::API_DOC => ExampleClass::class,
+ *          Config::REQUEST_CONSTRAINS => ExampleClass::class,
+ *          Config::CQ_FACTORY => ExampleClass::class,
+ *          Config::SERVICE => ExampleClass::class,
+ *          Config::REPOSITORY => ExampleClass::class,
+ *          Config::API_DOC => ExampleClass::class,
  *      ],
+ *  ],
  *
  *
  */
 
+use Domain\User\GetUserById\Doc;
+use Domain\User\GetUserById\QueryFactory;
+use Domain\User\GetUserById\Repository;
+use Domain\User\GetUserById\RequestConstrains;
+use Domain\User\GetUserById\Service;
 use Infrastructure\Common\ValueObject\Action;
 use Infrastructure\Common\ValueObject\Category;
+use Infrastructure\RequestMenager\Config;
 
 class RequestControlerConfig
 {
@@ -31,7 +37,11 @@ class RequestControlerConfig
         return [
             Category::USER => [
                 Action::GET_USER_BY_ID => [
-
+                    Config::REQUEST_CONSTRAINS => RequestConstrains::class,
+                    Config::CQ_FACTORY => QueryFactory::class,
+                    Config::SERVICE => Service::class,
+                    Config::REPOSITORY => Repository::class,
+                    Config::API_DOC => Doc::class,
                 ],
             ],
         ];
