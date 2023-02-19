@@ -2,15 +2,20 @@
 
 declare(strict_types=1);
 
+use App\ContainerBuilder;
 use App\RouteInitializer;
 use DI\Bridge\Slim\Bridge;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-// Creating app instance
-$app = Bridge::create();
+// Build container with dependecies
+$container = ContainerBuilder::buildContainer();
 
+// Creating app instance
+$app = Bridge::create($container);
+
+// Routing
 RouteInitializer::init($app);
-//DependenciesInjector::init($app->getContainer());
+
 
 $app->run();
