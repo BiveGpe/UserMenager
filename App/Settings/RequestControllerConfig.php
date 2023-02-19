@@ -30,7 +30,7 @@ use Infrastructure\Common\ValueObject\Action;
 use Infrastructure\Common\ValueObject\Category;
 use Infrastructure\RequestMenager\Config;
 
-class RequestControlerConfig
+class RequestControllerConfig
 {
     public static function getConfig(): array
     {

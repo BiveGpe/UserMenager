@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Infrastructure\Common\ValueObject;
 
-use http\Exception\InvalidArgumentException;
+use InvalidArgumentException;
 
 class Action
 {
