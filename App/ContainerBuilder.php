@@ -9,9 +9,6 @@ use DI\Container;
 
 class ContainerBuilder
 {
-    /**
-     * @throws \Exception
-     */
     public static function buildContainer(): Container
     {
         $builder = new \DI\ContainerBuilder();
