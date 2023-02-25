@@ -6,13 +6,16 @@ namespace Infrastructure\RequestMenager;
 
 use Infrastructure\Common\Interfaces\CQFactoryInterface;
 use Infrastructure\Common\Interfaces\DocInterface;
+use Infrastructure\Common\Interfaces\DTOFactoryInterface;
 use Infrastructure\Common\Interfaces\RepositoryInterface;
-use Infrastructure\Common\Interfaces\RequestConstrainsInterface;
+use Infrastructure\Common\Interfaces\ConstraintsInterface;
 use Infrastructure\Common\Interfaces\ServiceInterface;
 
 class ClassStash
 {
-    private RequestConstrainsInterface $requestConstrains;
+    private DocInterface $doc;
+
+    private ConstraintsInterface $requestConstrains;
 
     private CQFactoryInterface $cqFactory;
 
@@ -20,25 +23,34 @@ class ClassStash
 
     private RepositoryInterface $repository;
 
-    private RequestConstrainsInterface $responseConstrains;
+    private DTOFactoryInterface $DTOFactory;
 
-    private DocInterface $doc;
+    private ConstraintsInterface $responseConstrains;
 
     public function __construct(
-        RequestConstrainsInterface $requestConstrains,
+        DocInterface $doc,
+        ConstraintsInterface $requestConstrains,
         CQFactoryInterface $cqFactory,
         ServiceInterface $service,
         RepositoryInterface $repository,
-        DocInterface $doc
+        DTOFactoryInterface $DTOFactory,
+        ConstraintsInterface $responseConstrains
     ) {
+        $this->doc = $doc;
         $this->requestConstrains = $requestConstrains;
         $this->cqFactory = $cqFactory;
         $this->service = $service;
         $this->repository = $repository;
-        $this->doc = $doc;
+        $this->DTOFactory = $DTOFactory;
+        $this->responseConstrains = $responseConstrains;
     }
 
-    public function getRequestConstrains(): RequestConstrainsInterface
+    public function getDoc(): DocInterface
+    {
+        return $this->doc;
+    }
+
+    public function getRequestConstrains(): ConstraintsInterface
     {
         return $this->requestConstrains;
     }
@@ -58,8 +70,13 @@ class ClassStash
         return $this->repository;
     }
 
-    public function getDoc(): DocInterface
+    public function getDTOFactory(): DTOFactoryInterface
     {
-        return $this->doc;
+        return $this->DTOFactory;
+    }
+
+    public function getResponseConstrains(): ConstraintsInterface
+    {
+        return $this->responseConstrains;
     }
 }
