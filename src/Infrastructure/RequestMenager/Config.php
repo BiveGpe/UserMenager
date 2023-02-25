@@ -10,17 +10,19 @@ use Slim\Http\ServerRequest;
 
 class Config
 {
-    public const REQUEST_CONSTRAINS = 'RequestConstrains';
+    public const REQUEST_CONSTRAINTS = 'RequestConstraints';
     public const CQ_FACTORY = 'CQFactory';
     public const SERVICE = 'Service';
     public const REPOSITORY = 'Repository';
+    public const RESPONSE_CONSTRAINTS = 'ResponseConstraints';
     public const API_DOC = 'ApiDoc';
 
     private const CONFIG_CONST_ARRAY = [
-        self::REQUEST_CONSTRAINS,
+        self::REQUEST_CONSTRAINTS,
         self::CQ_FACTORY,
         self::SERVICE,
         self::REPOSITORY,
+        self::RESPONSE_CONSTRAINTS,
         self::API_DOC,
     ];
 
@@ -39,7 +41,7 @@ class Config
         $category = $request->getAttribute(Category::class)->getValue();
         $action = $request->getAttribute(Action::class)->getValue();
 
-        $requestConstrains = new $config[$category][$action][self::REQUEST_CONSTRAINS];
+        $requestConstrains = new $config[$category][$action][self::REQUEST_CONSTRAINTS];
         $cqFactory = new $config[$category][$action][self::CQ_FACTORY];
         $service = new $config[$category][$action][self::SERVICE];
         $repository = new $config[$category][$action][self::REPOSITORY];

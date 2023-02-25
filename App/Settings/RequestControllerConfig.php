@@ -37,7 +37,7 @@ class RequestControllerConfig
         return [
             Category::USER => [
                 Action::GET_USER_BY_ID => [
-                    Config::REQUEST_CONSTRAINS => RequestConstrains::class,
+                    Config::REQUEST_CONSTRAINTS => RequestConstrains::class,
                     Config::CQ_FACTORY => QueryFactory::class,
                     Config::SERVICE => Service::class,
                     Config::REPOSITORY => Repository::class,
