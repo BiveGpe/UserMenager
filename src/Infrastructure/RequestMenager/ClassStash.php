@@ -20,6 +20,8 @@ class ClassStash
 
     private RepositoryInterface $repository;
 
+    private RequestConstrainsInterface $responseConstrains;
+
     private DocInterface $doc;
 
     public function __construct(
