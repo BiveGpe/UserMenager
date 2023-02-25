@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Domain\User\GetUserById;
 
-class Query
+use Infrastructure\Common\Abstracts\AbstractQuery;
+
+class Query extends AbstractQuery
 {
 
 }
