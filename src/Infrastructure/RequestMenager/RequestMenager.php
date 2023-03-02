@@ -2,6 +2,7 @@
 
 namespace Infrastructure\RequestMenager;
 
+use Infrastructure\Common\Abstracts\AbstractDTO;
 use Slim\Http\ServerRequest;
 
 class RequestMenager
@@ -13,8 +14,23 @@ class RequestMenager
         $this->config = $configProvider;
     }
 
-    public function manageRequest(ServerRequest $request): void
+    public function manageRequest(ServerRequest $request): AbstractDTO
     {
         $classStash = $this->config->getClasses($request);
+
+        $doc = $classStash->getDoc();
+        // TODO: validation of docs
+
+        $requestConstraints = $classStash->getRequestConstraints();
+        // TODO: validation of request
+
+        $cq = $classStash->getCQFactory()->create($request);
+
+        $dto = $classStash->getService()->getDTO($cq, $classStash->getRepository());
+
+        $responseConstraints = $classStash->getResponseConstrains();
+        // TODO: validation of DTO
+
+        return $dto;
     }
 }

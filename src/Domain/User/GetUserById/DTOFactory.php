@@ -9,7 +9,6 @@ use Infrastructure\Common\Interfaces\DTOFactoryInterface;
 
 class DTOFactory implements DTOFactoryInterface
 {
-
     public function create(...$args): AbstractDTO
     {
         return new AbstractDTO();

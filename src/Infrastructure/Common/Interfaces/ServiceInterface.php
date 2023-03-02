@@ -8,5 +8,5 @@ use Infrastructure\Common\Abstracts\AbstractDTO;
 
 interface ServiceInterface
 {
-    public function getDTO(CQInferface $cq): AbstractDTO;
+    public function getDTO(CQInferface $cq, RepositoryInterface $repository): AbstractDTO;
 }

@@ -10,7 +10,6 @@ use Slim\Http\ServerRequest;
 
 class QueryFactory implements CQFactoryInterface
 {
-
     public function create(ServerRequest $request): AbstractQuery
     {
         return new Query();

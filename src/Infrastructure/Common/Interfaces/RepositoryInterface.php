@@ -6,5 +6,4 @@ namespace Infrastructure\Common\Interfaces;
 
 interface RepositoryInterface
 {
-
 }

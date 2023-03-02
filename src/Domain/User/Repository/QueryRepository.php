@@ -8,5 +8,8 @@ use Infrastructure\Common\Interfaces\RepositoryInterface;
 
 class QueryRepository implements RepositoryInterface
 {
-
+    public function getUserById(): array
+    {
+        return [];
+    }
 }

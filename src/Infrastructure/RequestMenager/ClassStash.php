@@ -15,7 +15,7 @@ class ClassStash
 {
     private DocInterface $doc;
 
-    private ConstraintsInterface $requestConstrains;
+    private ConstraintsInterface $requestConstraints;
 
     private CQFactoryInterface $cqFactory;
 
@@ -37,7 +37,7 @@ class ClassStash
         ConstraintsInterface $responseConstrains
     ) {
         $this->doc = $doc;
-        $this->requestConstrains = $requestConstrains;
+        $this->requestConstraints = $requestConstrains;
         $this->cqFactory = $cqFactory;
         $this->service = $service;
         $this->repository = $repository;
@@ -50,12 +50,12 @@ class ClassStash
         return $this->doc;
     }
 
-    public function getRequestConstrains(): ConstraintsInterface
+    public function getRequestConstraints(): ConstraintsInterface
     {
-        return $this->requestConstrains;
+        return $this->requestConstraints;
     }
 
-    public function getCqFactory(): CQFactoryInterface
+    public function getCQFactory(): CQFactoryInterface
     {
         return $this->cqFactory;
     }
