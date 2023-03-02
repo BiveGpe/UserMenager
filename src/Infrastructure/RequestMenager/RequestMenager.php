@@ -9,9 +9,14 @@ class RequestMenager
 {
     private Config $config;
 
-    public function __construct(Config $configProvider)
-    {
+    private Validator $validator;
+
+    public function __construct(
+        Config $configProvider,
+        Validator $validator,
+    ) {
         $this->config = $configProvider;
+        $this->validator = $validator;
     }
 
     public function manageRequest(ServerRequest $request): AbstractDTO
@@ -19,17 +24,17 @@ class RequestMenager
         $classStash = $this->config->getClasses($request);
 
         $doc = $classStash->getDoc();
-        // TODO: validation of docs
+        $this->validator->validateDoc($doc);
 
         $requestConstraints = $classStash->getRequestConstraints();
-        // TODO: validation of request
+        $this->validator->validateRequest($request, $requestConstraints);
 
         $cq = $classStash->getCQFactory()->create($request);
 
         $dto = $classStash->getService()->getDTO($cq);
 
         $responseConstraints = $classStash->getResponseConstrains();
-        // TODO: validation of DTO
+        $this->validator->validateDTOWithConstraints($dto, $responseConstraints);
 
         return $dto;
     }
