@@ -30,7 +30,6 @@ class RequestMenager
         $this->validator->validateRequest($request, $requestConstraints);
 
         $cq = $classStash->getCQFactory()->create($request);
-
         $dto = $classStash->getService()->getDTO($cq);
 
         $responseConstraints = $classStash->getResponseConstrains();
