@@ -26,7 +26,7 @@ class RequestMenager
 
         $cq = $classStash->getCQFactory()->create($request);
 
-        $dto = $classStash->getService()->getDTO($cq, $classStash->getRepository());
+        $dto = $classStash->getService()->getDTO($cq);
 
         $responseConstraints = $classStash->getResponseConstrains();
         // TODO: validation of DTO

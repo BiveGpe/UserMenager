@@ -21,10 +21,6 @@ class ClassStash
 
     private ServiceInterface $service;
 
-    private RepositoryInterface $repository;
-
-    private DTOFactoryInterface $DTOFactory;
-
     private ConstraintsInterface $responseConstrains;
 
     public function __construct(
@@ -32,16 +28,12 @@ class ClassStash
         ConstraintsInterface $requestConstrains,
         CQFactoryInterface $cqFactory,
         ServiceInterface $service,
-        RepositoryInterface $repository,
-        DTOFactoryInterface $DTOFactory,
         ConstraintsInterface $responseConstrains
     ) {
         $this->doc = $doc;
         $this->requestConstraints = $requestConstrains;
         $this->cqFactory = $cqFactory;
         $this->service = $service;
-        $this->repository = $repository;
-        $this->DTOFactory = $DTOFactory;
         $this->responseConstrains = $responseConstrains;
     }
 
@@ -63,16 +55,6 @@ class ClassStash
     public function getService(): ServiceInterface
     {
         return $this->service;
-    }
-
-    public function getRepository(): RepositoryInterface
-    {
-        return $this->repository;
-    }
-
-    public function getDTOFactory(): DTOFactoryInterface
-    {
-        return $this->DTOFactory;
     }
 
     public function getResponseConstrains(): ConstraintsInterface
