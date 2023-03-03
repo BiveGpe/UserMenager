@@ -10,11 +10,13 @@ namespace App\Settings;
  * Expected data:
  *  Category::USER => [
  *      Action::ADD_USER => [
- *          Config::REQUEST_CONSTRAINS => ExampleClass::class,
- *          Config::CQ_FACTORY => ExampleClass::class,
- *          Config::SERVICE => ExampleClass::class,
- *          Config::REPOSITORY => ExampleClass::class,
- *          Config::API_DOC => ExampleClass::class,
+ *          Config::API_DOC => Doc::class,
+ *          Config::REQUEST_CONSTRAINTS => RequestConstraints::class,
+ *          Config::CQ_FACTORY => QueryFactory::class,
+ *          Config::SERVICE => Service::class,
+ *          Config::REPOSITORY => QueryRepository::class,
+ *          Config::DTO_FACTORY => DTOFactory::class,
+ *          Config::RESPONSE_CONSTRAINTS => ResponseConstraints::class,
  *      ],
  *  ],
  *
@@ -22,10 +24,12 @@ namespace App\Settings;
  */
 
 use Domain\User\GetUserById\Doc;
+use Domain\User\GetUserById\DTOFactory;
 use Domain\User\GetUserById\QueryFactory;
-use Domain\User\GetUserById\Repository;
-use Domain\User\GetUserById\RequestConstrains;
+use Domain\User\GetUserById\RequestConstraints;
+use Domain\User\GetUserById\ResponseConstraints;
 use Domain\User\GetUserById\Service;
+use Domain\User\Repository\QueryRepository;
 use Infrastructure\Common\ValueObject\Action;
 use Infrastructure\Common\ValueObject\Category;
 use Infrastructure\RequestMenager\Config;
@@ -37,11 +41,13 @@ class RequestControllerConfig
         return [
             Category::USER => [
                 Action::GET_USER_BY_ID => [
-                    Config::REQUEST_CONSTRAINS => RequestConstrains::class,
+                    Config::API_DOC => Doc::class,
+                    Config::REQUEST_CONSTRAINTS => RequestConstraints::class,
                     Config::CQ_FACTORY => QueryFactory::class,
                     Config::SERVICE => Service::class,
-                    Config::REPOSITORY => Repository::class,
-                    Config::API_DOC => Doc::class,
+                    Config::REPOSITORY => QueryRepository::class,
+                    Config::DTO_FACTORY => DTOFactory::class,
+                    Config::RESPONSE_CONSTRAINTS => ResponseConstraints::class,
                 ],
             ],
         ];

@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Domain\User\GetUserById;
 
-class UserDTO
+use Infrastructure\Common\Abstracts\AbstractDTO;
+
+class UserDTO extends AbstractDTO
 {
 
 }

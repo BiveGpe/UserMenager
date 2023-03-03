@@ -6,42 +6,48 @@ namespace Infrastructure\RequestMenager;
 
 use Infrastructure\Common\Interfaces\CQFactoryInterface;
 use Infrastructure\Common\Interfaces\DocInterface;
+use Infrastructure\Common\Interfaces\DTOFactoryInterface;
 use Infrastructure\Common\Interfaces\RepositoryInterface;
-use Infrastructure\Common\Interfaces\RequestConstrainsInterface;
+use Infrastructure\Common\Interfaces\ConstraintsInterface;
 use Infrastructure\Common\Interfaces\ServiceInterface;
 
 class ClassStash
 {
-    private RequestConstrainsInterface $requestConstrains;
+    private DocInterface $doc;
+
+    private ConstraintsInterface $requestConstraints;
 
     private CQFactoryInterface $cqFactory;
 
     private ServiceInterface $service;
 
-    private RepositoryInterface $repository;
-
-    private DocInterface $doc;
+    private ConstraintsInterface $responseConstrains;
 
     public function __construct(
-        RequestConstrainsInterface $requestConstrains,
+        DocInterface $doc,
+        ConstraintsInterface $requestConstrains,
         CQFactoryInterface $cqFactory,
         ServiceInterface $service,
-        RepositoryInterface $repository,
-        DocInterface $doc
+        ConstraintsInterface $responseConstrains
     ) {
-        $this->requestConstrains = $requestConstrains;
+        $this->doc = $doc;
+        $this->requestConstraints = $requestConstrains;
         $this->cqFactory = $cqFactory;
         $this->service = $service;
-        $this->repository = $repository;
-        $this->doc = $doc;
+        $this->responseConstrains = $responseConstrains;
     }
 
-    public function getRequestConstrains(): RequestConstrainsInterface
+    public function getDoc(): DocInterface
     {
-        return $this->requestConstrains;
+        return $this->doc;
     }
 
-    public function getCqFactory(): CQFactoryInterface
+    public function getRequestConstraints(): ConstraintsInterface
+    {
+        return $this->requestConstraints;
+    }
+
+    public function getCQFactory(): CQFactoryInterface
     {
         return $this->cqFactory;
     }
@@ -51,13 +57,8 @@ class ClassStash
         return $this->service;
     }
 
-    public function getRepository(): RepositoryInterface
+    public function getResponseConstrains(): ConstraintsInterface
     {
-        return $this->repository;
-    }
-
-    public function getDoc(): DocInterface
-    {
-        return $this->doc;
+        return $this->responseConstrains;
     }
 }

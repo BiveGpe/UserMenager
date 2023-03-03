@@ -4,7 +4,13 @@ declare(strict_types=1);
 
 namespace Domain\User\GetUserById;
 
-class DTOFactory
-{
+use Infrastructure\Common\Abstracts\AbstractDTO;
+use Infrastructure\Common\Interfaces\DTOFactoryInterface;
 
+class DTOFactory implements DTOFactoryInterface
+{
+    public function create(...$args): AbstractDTO
+    {
+        return new AbstractDTO();
+    }
 }
