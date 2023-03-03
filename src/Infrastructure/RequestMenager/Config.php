@@ -46,9 +46,12 @@ class Config
         $apiDoc = new $config[$category][$action][self::API_DOC];
         $requestConstrains = new $config[$category][$action][self::REQUEST_CONSTRAINTS];
         $cqFactory = new $config[$category][$action][self::CQ_FACTORY];
-        $service = new $config[$category][$action][self::SERVICE];
         $repository = new $config[$category][$action][self::REPOSITORY];
         $dtoFactory = new $config[$category][$action][self::DTO_FACTORY];
+        $service = new $config[$category][$action][self::SERVICE](
+            $repository,
+            $dtoFactory,
+        );
         $responseConstrains = new $config[$category][$action][self::RESPONSE_CONSTRAINTS];
 
         return new ClassStash(
@@ -56,8 +59,6 @@ class Config
             $requestConstrains,
             $cqFactory,
             $service,
-            $repository,
-            $dtoFactory,
             $responseConstrains,
         );
     }

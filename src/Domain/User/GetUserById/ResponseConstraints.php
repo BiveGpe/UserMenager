@@ -4,7 +4,12 @@ declare(strict_types=1);
 
 namespace Domain\User\GetUserById;
 
-class ResponseConstraints
-{
+use Infrastructure\Common\Interfaces\ConstraintsInterface;
 
+class ResponseConstraints implements ConstraintsInterface
+{
+    public function get(): array
+    {
+        return [];
+    }
 }

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Infrastructure\Common\Interfaces;
 
-interface ConstraintsInterface
+interface CQInferface
 {
-    public function get(): array;
 }

@@ -15,15 +15,11 @@ class ClassStash
 {
     private DocInterface $doc;
 
-    private ConstraintsInterface $requestConstrains;
+    private ConstraintsInterface $requestConstraints;
 
     private CQFactoryInterface $cqFactory;
 
     private ServiceInterface $service;
-
-    private RepositoryInterface $repository;
-
-    private DTOFactoryInterface $DTOFactory;
 
     private ConstraintsInterface $responseConstrains;
 
@@ -32,16 +28,12 @@ class ClassStash
         ConstraintsInterface $requestConstrains,
         CQFactoryInterface $cqFactory,
         ServiceInterface $service,
-        RepositoryInterface $repository,
-        DTOFactoryInterface $DTOFactory,
         ConstraintsInterface $responseConstrains
     ) {
         $this->doc = $doc;
-        $this->requestConstrains = $requestConstrains;
+        $this->requestConstraints = $requestConstrains;
         $this->cqFactory = $cqFactory;
         $this->service = $service;
-        $this->repository = $repository;
-        $this->DTOFactory = $DTOFactory;
         $this->responseConstrains = $responseConstrains;
     }
 
@@ -50,12 +42,12 @@ class ClassStash
         return $this->doc;
     }
 
-    public function getRequestConstrains(): ConstraintsInterface
+    public function getRequestConstraints(): ConstraintsInterface
     {
-        return $this->requestConstrains;
+        return $this->requestConstraints;
     }
 
-    public function getCqFactory(): CQFactoryInterface
+    public function getCQFactory(): CQFactoryInterface
     {
         return $this->cqFactory;
     }
@@ -63,16 +55,6 @@ class ClassStash
     public function getService(): ServiceInterface
     {
         return $this->service;
-    }
-
-    public function getRepository(): RepositoryInterface
-    {
-        return $this->repository;
-    }
-
-    public function getDTOFactory(): DTOFactoryInterface
-    {
-        return $this->DTOFactory;
     }
 
     public function getResponseConstrains(): ConstraintsInterface

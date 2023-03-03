@@ -8,5 +8,8 @@ use Infrastructure\Common\Interfaces\ConstraintsInterface;
 
 class RequestConstraints implements ConstraintsInterface
 {
-
+    public function get(): array
+    {
+        return [];
+    }
 }
