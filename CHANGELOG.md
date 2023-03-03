@@ -1,3 +1,23 @@
+### v0.3 ###
+* Adds ADR
+* Rebuild of RequestMenager config
+* Fill classes with simply metods
+* * DTOFactory
+* * QueryFactory
+* * ResponseConstraints
+* * ResponseConstraints
+* Make QueryRepository to all UserCategory
+* Implement DTOFactory and QueryRepository as params of Service
+* Make Abstract Classes
+* * AbstractDTO
+* * AbstractQuery
+* Fill interfaces with methods
+* * ConstraintsInterface
+* * DTOFactoryInterface
+* * ServiceInterface
+* Rebuild ClassStash
+* Build Body of RequestMenager and empty Validator
+
 ### v0.2 ###
 * Adds php-di/slim-bridge
 * Adds new folders to autoload in composer
