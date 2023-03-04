@@ -9,8 +9,14 @@ use Infrastructure\Common\Interfaces\DTOFactoryInterface;
 
 class DTOFactory implements DTOFactoryInterface
 {
-    public function create(...$args): AbstractDTO
+    public function create(... $args): AbstractDTO
     {
-        return new AbstractDTO();
+        $databaseData = $args[0];
+
+        return new UserDTO(
+            $databaseData['firstName'],
+            $databaseData['secondName'],
+            $databaseData['nick'],
+        );
     }
 }

@@ -21,8 +21,7 @@ Class RouteInitializer
         });
 
         $app->group('/users', function (App $app) {
-            $app->get('', [UserController::class, 'getUsers']);
-            $app->get('/{id}', [UserController::class, 'getUserById']);
+            $app->get('', [UserController::class, 'getUserById']);
         });
 
     }

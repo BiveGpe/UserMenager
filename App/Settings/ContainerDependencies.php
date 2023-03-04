@@ -8,6 +8,7 @@ use DI;
 use Infrastructure\RequestMenager\Config;
 use Infrastructure\RequestMenager\ConfigProvider;
 use Infrastructure\RequestMenager\RequestMenager;
+use Infrastructure\RequestMenager\Validator;
 
 class ContainerDependencies
 {
@@ -27,7 +28,10 @@ class ContainerDependencies
             })->parameter('configProvider', DI\get(ConfigProvider::class)),
 
             RequestMenager::class => DI\Factory(function ($config) {
-                return new RequestMenager($config);
+                return new RequestMenager(
+                    $config,
+                    new Validator(),
+                );
             })->parameter('config', DI\get(Config::class)),
         ];
     }
