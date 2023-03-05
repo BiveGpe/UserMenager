@@ -20,7 +20,6 @@ namespace App\Settings;
  *      ],
  *  ],
  *
- *
  */
 
 use Domain\User\GetUserById\Doc;

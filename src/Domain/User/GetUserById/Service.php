@@ -23,8 +23,10 @@ class Service implements ServiceInterface
 
     public function getDTO(CQInferface $cq): AbstractDTO
     {
-        $data = $this->repository->getUserById();
+        $inputData = $cq->getArray();
 
-        return $this->DTOFactory->create();
+        $userData = $this->repository->getUserById($inputData['id']);
+
+        return $this->DTOFactory->create($userData);
     }
 }

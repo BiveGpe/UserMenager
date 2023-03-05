@@ -25,8 +25,8 @@ class UserController
             ->withAttribute(Category::class, new Category(Category::USER))
             ->withAttribute(Action::class, new Action(Action::GET_USER_BY_ID));
 
-        $this->requestMenager->manageRequest($request);
+        $dto = $this->requestMenager->manageRequest($request);
 
-        return $response->withJson(['success' => 'true']);
+        return $response->withJson($dto->jsonSerialize());
     }
 }

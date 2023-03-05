@@ -6,4 +6,5 @@ namespace Infrastructure\Common\Interfaces;
 
 interface CQInferface
 {
+    public function getArray(): array;
 }
