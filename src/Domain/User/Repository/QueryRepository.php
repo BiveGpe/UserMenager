@@ -17,9 +17,16 @@ class QueryRepository implements RepositoryInterface
         }
 
         return [
+            'id' => 5,
+            'nickName' => 'PussyDestroyer',
             'firstName' => 'Wiktor',
             'secondName' => 'Rapacz',
-            'nick' => 'PussyDestroyer',
+            'email' => 'fakeMail@chuj.pl',
+            'address' => 'fakeAddress',
+            'skillCollection' => [
+                'skill1',
+                'skill2',
+            ],
         ];
     }
 }
