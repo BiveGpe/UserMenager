@@ -8,5 +8,4 @@ use JsonSerializable;
 
 abstract class AbstractDTO implements JsonSerializable
 {
-
 }

@@ -1,3 +1,7 @@
+### v0.3.1 ###
+* Adds simple functionality to getUserById
+* * only with id equals to 5
+
 ### v0.3 ###
 * Adds ADR
 * Rebuild of RequestMenager config
