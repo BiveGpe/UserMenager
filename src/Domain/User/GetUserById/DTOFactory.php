@@ -16,7 +16,7 @@ class DTOFactory implements DTOFactoryInterface
         return new UserDTO(
             $databaseData['firstName'],
             $databaseData['secondName'],
-            $databaseData['nick'],
+            $databaseData['nickName'],
         );
     }
 }

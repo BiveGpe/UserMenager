@@ -16,5 +16,8 @@
             "Infrastructure\\": "src/Infrastructure",
             "Tests\\": "Tests"
         }
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.15"
     }
 }
