@@ -1,14 +1,12 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace Infrastructure\RequestMenager;
 
+use Infrastructure\Common\Interfaces\ConstraintsInterface;
 use Infrastructure\Common\Interfaces\CQFactoryInterface;
 use Infrastructure\Common\Interfaces\DocInterface;
-use Infrastructure\Common\Interfaces\DTOFactoryInterface;
-use Infrastructure\Common\Interfaces\RepositoryInterface;
-use Infrastructure\Common\Interfaces\ConstraintsInterface;
 use Infrastructure\Common\Interfaces\ServiceInterface;
 
 class ClassStash

@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 use App\ContainerBuilder;
 use App\RouteInitializer;
@@ -16,6 +16,5 @@ $app = Bridge::create($container);
 
 // Routing
 RouteInitializer::init($app);
-
 
 $app->run();

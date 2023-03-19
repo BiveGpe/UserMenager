@@ -1,10 +1,13 @@
 <?php
+
+declare(strict_types = 1);
 /*
  * This document has been generated with
  * https://mlocati.github.io/php-cs-fixer-configurator/#version:3.14.4|configurator
  * you can change this configuration by importing this file.
  */
 $config = new PhpCsFixer\Config();
+
 return $config
     ->setRiskyAllowed(true)
     ->setRules([
@@ -43,7 +46,7 @@ return $config
         // Remove extra spaces in a nullable typehint.
         'compact_nullable_typehint' => true,
         // Concatenation should be spaced according configuration.
-        'concat_space' => ['spacing'=>'one'],
+        'concat_space' => ['spacing' => 'one'],
         // The PHP constants `true`, `false`, and `null` MUST be written using the correct casing.
         'constant_case' => true,
         // The body of each control structure MUST be enclosed within braces.
@@ -51,7 +54,7 @@ return $config
         // Control structure continuation keyword must be on the configured line.
         'control_structure_continuation_position' => true,
         // Equal sign in declare statement should be surrounded by spaces or not following configuration.
-        'declare_equal_normalize' => ['space'=>'single'],
+        'declare_equal_normalize' => ['space' => 'single'],
         // Force strict types declaration in all files. Requires PHP >= 7.0.
         'declare_strict_types' => true,
         // The keyword `elseif` should be used instead of `else if` so that all control keywords look like single words.
@@ -138,8 +141,8 @@ return $config
         'no_spaces_around_offset' => true,
         // There MUST NOT be a space after the opening parenthesis. There MUST NOT be a space before the closing parenthesis.
         'no_spaces_inside_parenthesis' => true,
-        // Remove trailing commas in list function calls.
-        'no_trailing_comma_in_list_call' => true,
+        // If a list of values separated by a comma is contained on a single line, then the last item MUST NOT have a trailing comma.
+        'no_trailing_comma_in_singleline' => true,
         // If a list of values separated by a comma is contained on a single line, then the last item MUST NOT have a trailing comma.
         'no_trailing_comma_in_singleline' => true,
         // Remove trailing whitespace at the end of non-blank lines.
@@ -197,8 +200,8 @@ return $config
         // In array declaration, there MUST be a whitespace after each comma.
         'whitespace_after_comma_in_array' => true,
     ])
-    ->setFinder(PhpCsFixer\Finder::create()
-        // ->exclude('folder-to-exclude') // if you want to exclude some folders, you can do it like this!
-        ->in(__DIR__)
-    )
-    ;
+    ->setFinder(
+        PhpCsFixer\Finder::create()
+            ->exclude(__DIR__ . 'vendor') // if you want to exclude some folders, you can do it like this!
+            ->in(__DIR__)
+    );

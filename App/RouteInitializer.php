@@ -9,9 +9,9 @@ use Slim\Http\Response;
 use Slim\Http\ServerRequest;
 use Slim\Routing\RouteCollectorProxy as App;
 
-Class RouteInitializer
+class RouteInitializer
 {
-    static public function init(App $app): void
+    public static function init(App $app): void
     {
         // Ping
         $app->get('/', function (ServerRequest $request, Response $response) {
@@ -23,6 +23,5 @@ Class RouteInitializer
         $app->group('/users', function (App $app) {
             $app->get('', [UserController::class, 'getUserById']);
         });
-
     }
 }

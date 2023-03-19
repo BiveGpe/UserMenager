@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace App;
 
@@ -13,6 +13,7 @@ class ContainerBuilder
     {
         $builder = new \DI\ContainerBuilder();
         $builder->addDefinitions(ContainerDependencies::getDependecies());
+
         return $builder->build();
     }
 }
