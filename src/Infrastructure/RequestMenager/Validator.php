@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace Infrastructure\RequestMenager;
 
@@ -13,16 +13,13 @@ class Validator
 {
     public function validateDoc(DocInterface $doc): void
     {
-
     }
 
     public function validateRequest(ServerRequest $request, ConstraintsInterface $constraints): void
     {
-
     }
 
     public function validateDTOWithConstraints(AbstractDTO $object, ConstraintsInterface $constraints): void
     {
-
     }
 }

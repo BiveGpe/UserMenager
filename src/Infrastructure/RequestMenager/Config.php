@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace Infrastructure\RequestMenager;
 
@@ -11,11 +11,17 @@ use Slim\Http\ServerRequest;
 class Config
 {
     public const API_DOC = 'ApiDoc';
+
     public const REQUEST_CONSTRAINTS = 'RequestConstraints';
+
     public const CQ_FACTORY = 'CQFactory';
+
     public const SERVICE = 'Service';
+
     public const REPOSITORY = 'QueryRepository';
+
     public const DTO_FACTORY = 'DTOFactory';
+
     public const RESPONSE_CONSTRAINTS = 'ResponseConstraints';
 
     private const CONFIG_CONST_ARRAY = [
@@ -43,16 +49,16 @@ class Config
         $category = $request->getAttribute(Category::class)->getValue();
         $action = $request->getAttribute(Action::class)->getValue();
 
-        $apiDoc = new $config[$category][$action][self::API_DOC];
-        $requestConstrains = new $config[$category][$action][self::REQUEST_CONSTRAINTS];
-        $cqFactory = new $config[$category][$action][self::CQ_FACTORY];
-        $repository = new $config[$category][$action][self::REPOSITORY];
-        $dtoFactory = new $config[$category][$action][self::DTO_FACTORY];
+        $apiDoc = new $config[$category][$action][self::API_DOC]();
+        $requestConstrains = new $config[$category][$action][self::REQUEST_CONSTRAINTS]();
+        $cqFactory = new $config[$category][$action][self::CQ_FACTORY]();
+        $repository = new $config[$category][$action][self::REPOSITORY]();
+        $dtoFactory = new $config[$category][$action][self::DTO_FACTORY]();
         $service = new $config[$category][$action][self::SERVICE](
             $repository,
             $dtoFactory,
         );
-        $responseConstrains = new $config[$category][$action][self::RESPONSE_CONSTRAINTS];
+        $responseConstrains = new $config[$category][$action][self::RESPONSE_CONSTRAINTS]();
 
         return new ClassStash(
             $apiDoc,

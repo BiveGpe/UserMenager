@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Infrastructure\RequestMenager;
 
 use Infrastructure\Common\Abstracts\AbstractDTO;

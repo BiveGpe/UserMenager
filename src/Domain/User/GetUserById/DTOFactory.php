@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace Domain\User\GetUserById;
 
@@ -16,7 +16,7 @@ class DTOFactory implements DTOFactoryInterface
         return new UserDTO(
             $databaseData['firstName'],
             $databaseData['secondName'],
-            $databaseData['nick'],
+            $databaseData['nickName'],
         );
     }
 }
