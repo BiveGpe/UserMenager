@@ -1,5 +1,5 @@
 ### v0.4 ###
-* Adds PhpUnit and simple test fot Action ValueObject
+* Adds PhpUnit and simple test for Action ValueObject
 * Adds CsFixer with config
 
 ### v0.3.1 ###
