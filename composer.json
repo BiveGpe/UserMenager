@@ -14,8 +14,10 @@
         "phpunit/phpunit": "^10.0"
     },
     "scripts": {
-        "cs-fix": "php8.1 vendor/php-cs-fixer-v3.phar fix --config php_cs.php --verbose",
-        "cs-check": "php8.1 vendor/php-cs-fixer-v3.phar fix --config php_cs.php --verbose --dry-run"
+        "cs-fix": "php8.1 vendor/bin/php-cs-fixer-v3.phar fix --config php_cs.php --verbose",
+        "cs-check": "php8.1 vendor/bin/php-cs-fixer-v3.phar fix --config php_cs.php --verbose --dry-run",
+        "test": "php8.1 vendor/bin/phpunit --testdox --do-not-cache-result",
+        "test-coverage": "php8.1 vendor/bin/phpunit --coverage-html /var/www/usermenager/covarage/ --do-not-cache-result"
     },
     "autoload": {
         "psr-4": {

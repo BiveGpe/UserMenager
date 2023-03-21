@@ -1,3 +1,7 @@
+### v0.4 ###
+* Adds PhpUnit and simple test fot Action ValueObject
+* Adds CsFixer with config
+
 ### v0.3.1 ###
 * Adds simple functionality to getUserById
 * * only with id equals to 5
