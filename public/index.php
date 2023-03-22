@@ -7,6 +7,8 @@ use App\RouteInitializer;
 use DI\Bridge\Slim\Bridge;
 
 require __DIR__ . '/../vendor/autoload.php';
+//phpinfo();
+//die();
 
 // Build container with dependecies
 $container = ContainerBuilder::buildContainer();
