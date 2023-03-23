@@ -21,14 +21,24 @@ class QueryRepository implements RepositoryInterface
     {
         $sql = <<<'SQL'
             SELECT
-                *
+                id,
+                firstname,
+                lastname,
+                username,
+                email,
+                password,
+                created_at,
+                updated_at,
+                active
             FROM
-                "user";
+                "user"
+            WHERE
+                id = :id
         SQL;
 
         $stmt = $this->pdo->prepare($sql);
 
-        $stmt->execute();
+        $stmt->execute(['id' => $id->getValue()]);
 
         $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
