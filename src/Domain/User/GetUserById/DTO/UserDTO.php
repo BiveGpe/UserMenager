@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Domain\User\GetUserById;
+namespace Domain\User\GetUserById\DTO;
 
 use DateTime;
 use Infrastructure\Common\Abstracts\AbstractDTO;
@@ -23,7 +23,7 @@ class UserDTO extends AbstractDTO
 
     private DateTime $updatedAt;
 
-    private bool $active;
+    private bool $deleted;
 
     public function __construct(
         string $firstname,
@@ -33,7 +33,8 @@ class UserDTO extends AbstractDTO
         string $password,
         DateTime $createdAt,
         DateTime $updatedAt,
-        bool $active,
+        bool $deleted,
+        GameDTOCollection $games,
     ) {
         $this->firstname = $firstname;
         $this->lastname = $lastname;
@@ -42,7 +43,8 @@ class UserDTO extends AbstractDTO
         $this->password = $password;
         $this->createdAt = $createdAt;
         $this->updatedAt = $updatedAt;
-        $this->active = $active;
+        $this->deleted = $deleted;
+        $this->games = $games;
     }
 
     public function jsonSerialize(): array
@@ -53,9 +55,10 @@ class UserDTO extends AbstractDTO
             'username' => $this->getUsername(),
             'email' => $this->getEmail(),
             'password' => $this->getPassword(),
-            'createdAt' => $this->getCreatedAt(),
-            'updatedAt' => $this->getUpdatedAt(),
-            'active' => $this->getActive(),
+            'createdAt' => $this->getCreatedAt()->format('Y-m-d H:i:s'),
+            'updatedAt' => $this->getUpdatedAt()->format('Y-m-d H:i:s'),
+            'deleted' => $this->getDeleted(),
+            'games' => $this->getGames()->jsonSerialize()
         ];
     }
 
@@ -94,8 +97,13 @@ class UserDTO extends AbstractDTO
         return $this->updatedAt;
     }
 
-    public function getActive(): bool
+    public function getDeleted(): bool
     {
-        return $this->active;
+        return $this->deleted;
+    }
+
+    public function getGames(): GameDTOCollection
+    {
+        return $this->games;
     }
 }
