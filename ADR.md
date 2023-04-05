@@ -1,3 +1,10 @@
+#### Problem:
+* Package to database migration.
+#### Solution:
+* Use Phinx.
+#### Why:
+* Phinx is a simple and easy to use migration tool with big community.
+
 ## --- 
 #### Problem:
 * Use one Repository for all communication with database, or separate Repository to each request.

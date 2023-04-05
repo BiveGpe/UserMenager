@@ -27,6 +27,8 @@ class Service implements ServiceInterface
 
         $userData = $this->repository->getUserById($inputData['id']);
 
-        return $this->DTOFactory->create($userData);
+        $userGames = $this->repository->getUserGames($inputData['id']);
+
+        return $this->DTOFactory->create($userData, $userGames);
     }
 }

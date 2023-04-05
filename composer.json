@@ -7,7 +7,8 @@
         "ext-xdebug": "*",
         "php-di/php-di": "^7.0",
         "php-di/slim-bridge": "^3.3",
-        "ext-http": "*"
+        "ext-pdo": "*",
+        "robmorgan/phinx": "^0.13.4"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "3.15",
@@ -17,7 +18,11 @@
         "cs-fix": "php8.1 vendor/bin/php-cs-fixer-v3.phar fix --config php_cs.php --verbose",
         "cs-check": "php8.1 vendor/bin/php-cs-fixer-v3.phar fix --config php_cs.php --verbose --dry-run",
         "test": "php8.1 vendor/bin/phpunit --testdox --do-not-cache-result",
-        "test-coverage": "php8.1 vendor/bin/phpunit --coverage-html /var/www/usermenager/covarage/ --do-not-cache-result"
+        "test-coverage": "php8.1 vendor/bin/phpunit --coverage-html /var/www/usermenager/covarage/ --do-not-cache-result",
+        "migrate-create": "php8.1 vendor/bin/phinx create NewMigration --template='db/migrations/template.php'",
+        "migrate": "php8.1 vendor/bin/phinx migrate",
+        "migrate-rollback": "php8.1 vendor/bin/phinx rollback",
+        "seed": "php8.1 vendor/bin/phinx seed:run"
     },
     "autoload": {
         "psr-4": {
