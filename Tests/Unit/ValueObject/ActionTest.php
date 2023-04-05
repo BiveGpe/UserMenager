@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace Tests\Unit\ValueObject;
 
@@ -19,7 +19,7 @@ class ActionTest extends TestCase
         self::assertSame($testData, $action->getValue());
     }
 
-    static public function successDataProvider(): array
+    public static function successDataProvider(): array
     {
         return [
             ["GetUserById"],
@@ -35,7 +35,7 @@ class ActionTest extends TestCase
         $action = new Action($testData);
     }
 
-    static public function  invalidArgumentExceptionDataProvider(): array
+    public static function invalidArgumentExceptionDataProvider(): array
     {
         return [
             ["testData"],

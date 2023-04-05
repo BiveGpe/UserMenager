@@ -1,13 +1,13 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace Domain\User\GetUserById\DTO;
 
 use DateTime;
 use Infrastructure\Common\Abstracts\AbstractDTO;
 
-class GameDTO  extends AbstractDTO
+class GameDTO extends AbstractDTO
 {
     private string $name;
 

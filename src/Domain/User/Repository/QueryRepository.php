@@ -13,21 +13,21 @@ class QueryRepository extends AbstractRepository
     public function getUserById(PositiveInteger $id): array
     {
         $sql = <<<'SQL'
-            SELECT
-                id,
-                firstname,
-                lastname,
-                username,
-                email,
-                password,
-                created_at,
-                updated_at,
-                deleted
-            FROM
-                "user"
-            WHERE
-                id = :id
-        SQL;
+                SELECT
+                    id,
+                    firstname,
+                    lastname,
+                    username,
+                    email,
+                    password,
+                    created_at,
+                    updated_at,
+                    deleted
+                FROM
+                    "user"
+                WHERE
+                    id = :id
+            SQL;
 
         $stmt = $this->pdo->prepare($sql);
 
@@ -39,20 +39,20 @@ class QueryRepository extends AbstractRepository
     public function getUserGames(PositiveInteger $id): array
     {
         $sql = <<<'SQL'
-            SELECT
-                game.id,
-                game.name,
-                game.description,
-                game.created_at,
-                game.updated_at,
-                game.deleted
-            FROM
-                game
-            JOIN users_games
-                ON game.id = users_games.game_id
-            WHERE
-                users_games.user_id = :id
-        SQL;
+                SELECT
+                    game.id,
+                    game.name,
+                    game.description,
+                    game.created_at,
+                    game.updated_at,
+                    game.deleted
+                FROM
+                    game
+                JOIN users_games
+                    ON game.id = users_games.game_id
+                WHERE
+                    users_games.user_id = :id
+            SQL;
 
         $stmt = $this->pdo->prepare($sql);
 

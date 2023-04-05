@@ -18,7 +18,7 @@ class QueryFactory implements CQFactoryInterface
         $data = $request->getParams();
 
         return new Query(
-            new PositiveInteger((int)$data['id']),
+            new PositiveInteger((int) $data['id']),
             $request->getAttribute(Category::class),
             $request->getAttribute(Action::class),
         );
