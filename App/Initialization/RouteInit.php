@@ -2,20 +2,20 @@
 
 declare(strict_types = 1);
 
-namespace App;
+namespace App\Initialization;
 
 use App\Controller\UserController;
 use Slim\Http\Response;
 use Slim\Http\ServerRequest;
 use Slim\Routing\RouteCollectorProxy as App;
 
-class RouteInitializer
+class RouteInit
 {
     public static function init(App $app): void
     {
         // Ping
         $app->get('/', function (ServerRequest $request, Response $response) {
-            $response->getBody()->write("Ping");
+            $response->getBody()->write($_ENV['APP_NAME'] . ' is running');
 
             return $response;
         });

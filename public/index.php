@@ -2,24 +2,28 @@
 
 declare(strict_types = 1);
 
-use App\ContainerBuilder;
+use App\Initialization\ContainerInit;
+use App\Initialization\EnvInit;
+use App\Initialization\RouteInit;
 use App\Middleware\AuthorizationMiddleware;
-use App\RouteInitializer;
 use DI\Bridge\Slim\Bridge;
-use Infrastructure\Middleware\Authorization\Authorization;
 
 require __DIR__ . '/../vendor/autoload.php';
 
 // Build container with dependecies
-$container = ContainerBuilder::buildContainer();
+$container = ContainerInit::buildContainer();
+
+// initialization env variables
+EnvInit::init(EnvInit::DEFAULT_ENV);
 
 // Creating app instance
 $app = Bridge::create($container);
 
 // Middleware
-$app->add(new AuthorizationMiddleware(new Authorization()));
+$app->add(AuthorizationMiddleware::class);
+$app->addErrorMiddleware(true, true, true);
 
 // Routing
-RouteInitializer::init($app);
+RouteInit::init($app);
 
 $app->run();
