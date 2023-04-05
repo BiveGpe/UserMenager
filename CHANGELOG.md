@@ -1,3 +1,9 @@
+### v0.5 ###
+* Adds connection to Database
+* Adds Migration files
+* Adds seeds files
+* Extend GetUserById Action with Database data
+
 ### v0.4 ###
 * Adds PhpUnit and simple test for Action ValueObject
 * Adds CsFixer with config
