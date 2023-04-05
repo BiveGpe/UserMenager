@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 use Phinx\Migration\AbstractMigration;
 
@@ -9,7 +9,7 @@ final class template extends AbstractMigration
     public function up(): void
     {
         $sql = <<<SQL
-SQL;
+            SQL;
 
         $this->execute($sql);
     }
@@ -17,7 +17,7 @@ SQL;
     public function down(): void
     {
         $sql = <<<SQL
-SQL;
+            SQL;
 
         $this->execute($sql);
     }
