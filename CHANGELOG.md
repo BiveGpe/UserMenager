@@ -1,3 +1,9 @@
+### v0.5.1 ###
+* Adds Authentification
+* Adds Env variables
+* Use Standard Slim Error Handler
+* Refactor of App initialization
+
 ### v0.5 ###
 * Adds connection to Database
 * Adds Migration files

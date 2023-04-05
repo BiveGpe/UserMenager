@@ -15,13 +15,16 @@ class ContainerDependencies
     public static function getDependecies(): array
     {
         return [
-            'RequestControllerConfig' => DI\factory(function () {
-                return RequestControllerConfig::getConfig();
+            /**
+             * RequestMenager
+             */
+            'RequestMenagerConfig' => DI\factory(function () {
+                return RequestMenagerConfig::getConfig();
             }),
 
             ConfigProvider::class => DI\factory(function ($config) {
                 return new ConfigProvider($config);
-            })->parameter('config', DI\get('RequestControllerConfig')),
+            })->parameter('config', DI\get('RequestMenagerConfig')),
 
             Config::class => DI\factory(function ($configProvider) {
                 return new Config($configProvider);

@@ -2,16 +2,17 @@
 
 declare(strict_types = 1);
 
-namespace App;
+namespace App\Initialization;
 
 use App\Settings\ContainerDependencies;
 use DI\Container;
+use DI\ContainerBuilder;
 
-class ContainerBuilder
+class ContainerInit
 {
     public static function buildContainer(): Container
     {
-        $builder = new \DI\ContainerBuilder();
+        $builder = new ContainerBuilder();
         $builder->addDefinitions(ContainerDependencies::getDependecies());
 
         return $builder->build();
