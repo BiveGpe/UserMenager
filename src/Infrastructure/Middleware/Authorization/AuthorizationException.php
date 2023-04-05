@@ -9,7 +9,7 @@ use Lukasoppermann\Httpstatus\Httpstatuscodes;
 
 class AuthorizationException extends Exception
 {
-    const UNAUTHORIZED = 'Unauthorized';
+    private const UNAUTHORIZED = 'Unauthorized';
 
     public function __construct()
     {
