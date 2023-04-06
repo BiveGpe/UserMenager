@@ -18,7 +18,7 @@ class PositiveInteger
         ) {
             throw new InvalidArgumentException(sprintf("%s is not Positive Integer", $value));
         }
-        $this->value = $value;
+        $this->value = (int) $value;
     }
 
     public function getValue(): int
