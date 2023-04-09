@@ -6,9 +6,15 @@ namespace Domain\User\GetUserById\DTO;
 
 use DateTime;
 use Infrastructure\Common\Abstracts\AbstractDTO;
+use Infrastructure\Common\ValueObject\PositiveInteger;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Mapping\ClassMetadata;
 
+//TODO: GamesCount Dodać
 class UserDTO extends AbstractDTO
 {
+    private PositiveInteger $id;
+
     private string $firstname;
 
     private string $lastname;
@@ -23,9 +29,10 @@ class UserDTO extends AbstractDTO
 
     private DateTime $updatedAt;
 
-    private bool $deleted;
+    private GameDTOCollection $games;
 
     public function __construct(
+        PositiveInteger $id,
         string $firstname,
         string $lastname,
         string $username,
@@ -33,9 +40,9 @@ class UserDTO extends AbstractDTO
         string $password,
         DateTime $createdAt,
         DateTime $updatedAt,
-        bool $deleted,
         GameDTOCollection $games,
     ) {
+        $this->id = $id;
         $this->firstname = $firstname;
         $this->lastname = $lastname;
         $this->username = $username;
@@ -43,13 +50,13 @@ class UserDTO extends AbstractDTO
         $this->password = $password;
         $this->createdAt = $createdAt;
         $this->updatedAt = $updatedAt;
-        $this->deleted = $deleted;
         $this->games = $games;
     }
 
     public function jsonSerialize(): array
     {
         return [
+            'id' => $this->getId()->getValue(),
             'firstname' => $this->getFirstname(),
             'lastname' => $this->getLastname(),
             'username' => $this->getUsername(),
@@ -57,9 +64,26 @@ class UserDTO extends AbstractDTO
             'password' => $this->getPassword(),
             'createdAt' => $this->getCreatedAt()->format('Y-m-d H:i:s'),
             'updatedAt' => $this->getUpdatedAt()->format('Y-m-d H:i:s'),
-            'deleted' => $this->getDeleted(),
             'games' => $this->getGames()->jsonSerialize()
         ];
+    }
+
+    public static function loadValidatorMetadata(ClassMetadata $metadata)
+    {
+        $metadata->addPropertyConstraint('id', new NotBlank());
+        $metadata->addPropertyConstraint('firstname', new NotBlank());
+        $metadata->addPropertyConstraint('lastname', new NotBlank());
+        $metadata->addPropertyConstraint('username', new NotBlank());
+        $metadata->addPropertyConstraint('email', new NotBlank());
+        $metadata->addPropertyConstraint('password', new NotBlank());
+        $metadata->addPropertyConstraint('createdAt', new NotBlank());
+        $metadata->addPropertyConstraint('updatedAt', new NotBlank());
+        $metadata->addPropertyConstraint('games', new NotBlank());
+    }
+
+    public function getId(): PositiveInteger
+    {
+        return $this->id;
     }
 
     public function getFirstname(): string
@@ -95,11 +119,6 @@ class UserDTO extends AbstractDTO
     public function getUpdatedAt(): DateTime
     {
         return $this->updatedAt;
-    }
-
-    public function getDeleted(): bool
-    {
-        return $this->deleted;
     }
 
     public function getGames(): GameDTOCollection

@@ -6,6 +6,7 @@ namespace Domain\User\GetUserById\DTO;
 
 use InvalidArgumentException;
 
+//TODO: abstrac collection
 class GameDTOCollection
 {
     private array $games;

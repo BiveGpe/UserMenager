@@ -21,6 +21,9 @@ class RequestMenager
         $this->validator = $validator;
     }
 
+    /**
+     * @throws \Exception
+     */
     public function manageRequest(ServerRequest $request): AbstractDTO
     {
         $classStash = $this->config->getClasses($request);
@@ -32,10 +35,11 @@ class RequestMenager
         $this->validator->validateRequest($request, $requestConstraints);
 
         $cq = $classStash->getCQFactory()->create($request);
-        $dto = $classStash->getService()->getDTO($cq);
+        $this->validator->validateObjectWithMetadata($cq);
 
         $responseConstraints = $classStash->getResponseConstrains();
-        $this->validator->validateDTOWithConstraints($dto, $responseConstraints);
+        $dto = $classStash->getService()->getDTO($cq, $responseConstraints);
+        $this->validator->validateObjectWithMetadata($dto);
 
         return $dto;
     }

@@ -1,3 +1,10 @@
+### v0.5.2 ###
+* Adds Validation for:
+* * Request data
+* * Query data
+* * Response from DB data
+* Refactor SQL to not download deleted data from DB
+
 ### v0.5.1 ###
 * Adds Authentification
 * Adds Env variables
