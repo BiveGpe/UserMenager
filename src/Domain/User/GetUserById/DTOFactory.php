@@ -10,6 +10,7 @@ use Domain\User\GetUserById\DTO\GameDTOCollection;
 use Domain\User\GetUserById\DTO\UserDTO;
 use Infrastructure\Common\Abstracts\AbstractDTO;
 use Infrastructure\Common\Interfaces\DTOFactoryInterface;
+use Infrastructure\Common\ValueObject\PositiveInteger;
 
 class DTOFactory implements DTOFactoryInterface
 {
@@ -17,12 +18,11 @@ class DTOFactory implements DTOFactoryInterface
     {
         $UserData = $args[0];
 
-        $gamesData = $args[1];
-
         $gameDTOCollection = new GameDTOCollection(GameDTO::class);
-        foreach ($gamesData as $gameData) {
+        foreach ($UserData['games'] as $gameData) {
             $gameDTOCollection->addItem(
                 new GameDTO(
+                    new PositiveInteger($gameData['id']),
                     $gameData['name'],
                     $gameData['description'],
                     new DateTime($gameData['created_at']),
@@ -32,6 +32,7 @@ class DTOFactory implements DTOFactoryInterface
         }
 
         return new UserDTO(
+            new PositiveInteger($UserData['id']),
             $UserData['firstname'],
             $UserData['lastname'],
             $UserData['username'],
@@ -39,7 +40,6 @@ class DTOFactory implements DTOFactoryInterface
             $UserData['password'],
             new DateTime($UserData['created_at']),
             new DateTime($UserData['updated_at']),
-            $UserData['deleted'],
             $gameDTOCollection,
         );
     }

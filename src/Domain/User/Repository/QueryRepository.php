@@ -21,12 +21,13 @@ class QueryRepository extends AbstractRepository
                     email,
                     password,
                     created_at,
-                    updated_at,
-                    deleted
+                    updated_at
                 FROM
                     "user"
                 WHERE
                     id = :id
+                    AND
+                    deleted = false
             SQL;
 
         $stmt = $this->pdo->prepare($sql);

@@ -8,6 +8,8 @@ use Infrastructure\Common\Abstracts\AbstractQuery;
 use Infrastructure\Common\ValueObject\Action;
 use Infrastructure\Common\ValueObject\Category;
 use Infrastructure\Common\ValueObject\PositiveInteger;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Mapping\ClassMetadata;
 
 class Query extends AbstractQuery
 {
@@ -30,6 +32,11 @@ class Query extends AbstractQuery
         return [
             'id' => $this->getId(),
         ];
+    }
+
+    public static function loadValidatorMetadata(ClassMetadata $metadata)
+    {
+        $metadata->addPropertyConstraint('id', new NotBlank());
     }
 
     public function getId(): PositiveInteger
