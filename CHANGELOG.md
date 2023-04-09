@@ -1,3 +1,6 @@
+### v0.5.3 ###
+* Phpstan with config file and level 1
+
 ### v0.5.2 ###
 * Adds Validation for:
 * * Request data
@@ -6,7 +9,7 @@
 * Refactor SQL to not download deleted data from DB
 
 ### v0.5.1 ###
-* Adds Authentification
+* Adds Authentication
 * Adds Env variables
 * Use Standard Slim Error Handler
 * Refactor of App initialization
