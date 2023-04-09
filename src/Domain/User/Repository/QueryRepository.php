@@ -45,14 +45,17 @@ class QueryRepository extends AbstractRepository
                     game.name,
                     game.description,
                     game.created_at,
-                    game.updated_at,
-                    game.deleted
+                    game.updated_at
                 FROM
                     game
                 JOIN users_games
                     ON game.id = users_games.game_id
                 WHERE
                     users_games.user_id = :id
+                    AND
+                    game.deleted = false
+                    AND
+                    users_games.deleted = false
             SQL;
 
         $stmt = $this->pdo->prepare($sql);
