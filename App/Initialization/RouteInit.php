@@ -20,8 +20,12 @@ class RouteInit
             return $response;
         });
 
-        $app->group('/users', function (App $app) {
-            $app->get('', [UserController::class, 'getUserById']);
+        $app->group('/api', function (App $app) {
+            $app->group('/v1', function (App $app) {
+                $app->group('/users', function (App $app) {
+                    $app->get('', [UserController::class, 'getUserById']);
+                });
+            });
         });
     }
 }
