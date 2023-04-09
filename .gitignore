@@ -3,4 +3,5 @@ vendor
 .env
 .php-cs-fixer.cache
 .phpunit.cache
+.phpunit.result.cache
 covarage/

@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 require("vendor/autoload.php");
 
-$openapi = \OpenApi\Generator::scan([__DIR__], ['exclude' => ['tests'], 'pattern' => '*.php']);
+$openapi = (new OpenApi\Generator)
+    ->generate(Symfony\Component\Finder\Finder::create()->files()->in(['src', 'App']))
+;
 
-header('Content-Type: application/json');
-echo $openapi->toJson();
+$docFile = fopen(__DIR__ . "/docs/openapi.json", "w") or die("Unable to open file!");
+fwrite($docFile, $openapi->toJson());
+fclose($docFile);

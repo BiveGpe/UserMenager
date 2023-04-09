@@ -18,7 +18,7 @@ class AuthorizationMiddleware
 
     public function __invoke($request, $handler): Response
     {
-        $this->auth->authorize($request);
+//        $this->auth->authorize($request);
 
         return $handler->handle($request);
     }

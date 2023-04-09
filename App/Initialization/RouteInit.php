@@ -20,6 +20,12 @@ class RouteInit
             return $response;
         });
 
+        $app->get('/apidoc', function ($request, $response) {
+            $html = file_get_contents(__DIR__ . '/../../docs/apidoc.html');
+            $response->getBody()->write($html);
+            return $response;
+        });
+
         $app->group('/api', function (App $app) {
             $app->group('/v1', function (App $app) {
                 $app->group('/users', function (App $app) {
