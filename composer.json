@@ -30,7 +30,8 @@
         "seed": "php8.1 vendor/bin/phinx seed:run",
         "phpstan": "php8.1 vendor/bin/phpstan analyse -c phpstan.neon",
         "openApi": "php8.1 docgen.php",
-        "apidoc": "sudo redocly build-docs docs/openapi.json",
+        "apidoc": "sudo redocly build-docs core -o docs/apidoc.html --title ApiDoc",
+        "apidoc-live": "sudo redocly preview-docs docs/openapi.json -h 192.168.0.69",
         "appdoc": "doxygen Doxyfile"
     },
     "autoload": {

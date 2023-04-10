@@ -2,6 +2,11 @@
     "openapi": "3.1.0",
     "info": {
         "title": "UserController",
+        "description": "Communicate with the App by JSON requests and responses, each request must contain Authorization header with token.",
+        "contact": {
+            "name": "Wiktor Rapacz",
+            "email": "wiktorrapacz@gmail.com"
+        },
         "version": "1.0.0"
     },
     "servers": [
@@ -11,19 +16,141 @@
         }
     ],
     "paths": {
-        "/api/users": {
+        "/api/users/{id}": {
             "get": {
-                "summary": "Get all users",
+                "tags": [
+                    "User"
+                ],
+                "summary": "getUserById",
                 "description": "Get all users from database",
                 "parameters": [
                     {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Token",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
                         "name": "id",
-                        "in": "query"
+                        "in": "path",
+                        "description": "User id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "Success"
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "required": [
+                                        "id",
+                                        "firstname",
+                                        "lastname",
+                                        "email",
+                                        "password",
+                                        "createdAt",
+                                        "updatedAt",
+                                        "games"
+                                    ],
+                                    "properties": {
+                                        "id": {
+                                            "description": "User id",
+                                            "type": "integer",
+                                            "format": "PostiveInteger",
+                                            "minimum": 0,
+                                            "exclusiveMinimum": true,
+                                            "example": 1
+                                        },
+                                        "firstname": {
+                                            "description": "User firstname",
+                                            "type": "string",
+                                            "example": "Maciek"
+                                        },
+                                        "lastname": {
+                                            "description": "User lastname",
+                                            "type": "string",
+                                            "example": "Kowalski"
+                                        },
+                                        "email": {
+                                            "description": "User email",
+                                            "type": "string",
+                                            "example": "maciekkowalski@mail.com"
+                                        },
+                                        "password": {
+                                            "description": "User password",
+                                            "type": "string",
+                                            "example": "zaq1@WSX"
+                                        },
+                                        "createdAt": {
+                                            "description": "When user was created",
+                                            "type": "string",
+                                            "format": "date-time",
+                                            "example": "2023-04-05 21:48:31"
+                                        },
+                                        "updatedAt": {
+                                            "description": "When user was updated",
+                                            "type": "string",
+                                            "format": "date-time",
+                                            "example": "2023-04-05 21:48:31"
+                                        },
+                                        "games": {
+                                            "description": "User games",
+                                            "type": "array",
+                                            "items": {
+                                                "required": [
+                                                    "id",
+                                                    "name",
+                                                    "description",
+                                                    "createdAt",
+                                                    "updatedAt"
+                                                ],
+                                                "properties": {
+                                                    "id": {
+                                                        "description": "Game id",
+                                                        "type": "integer",
+                                                        "format": "PostiveInteger",
+                                                        "minimum": 0,
+                                                        "exclusiveMinimum": true,
+                                                        "example": 1
+                                                    },
+                                                    "name": {
+                                                        "description": "Game name",
+                                                        "type": "string",
+                                                        "example": "Minecraft"
+                                                    },
+                                                    "description": {
+                                                        "description": "Game description",
+                                                        "type": "string",
+                                                        "example": "Minecraft is a sandbox video game created by Swedish game developer Markus Persson and released by Mojang in 2011."
+                                                    },
+                                                    "createdAt": {
+                                                        "description": "When user was created",
+                                                        "type": "string",
+                                                        "format": "date-time",
+                                                        "example": "2023-04-05 21:48:31"
+                                                    },
+                                                    "updatedAt": {
+                                                        "description": "When user was updated",
+                                                        "type": "string",
+                                                        "format": "date-time",
+                                                        "example": "2023-04-05 21:48:31"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 }
             }
