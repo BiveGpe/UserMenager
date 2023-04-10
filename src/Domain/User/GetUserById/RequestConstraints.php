@@ -6,6 +6,7 @@ namespace Domain\User\GetUserById;
 
 use Infrastructure\Common\Constraints\Set\PositiveIntegerVOConstraints;
 use Infrastructure\Common\Interfaces\ConstraintsInterface;
+use Infrastructure\Common\RoutingStrategy\Consts;
 use Symfony\Component\Validator\Constraints\Collection;
 
 class RequestConstraints implements ConstraintsInterface
@@ -15,7 +16,14 @@ class RequestConstraints implements ConstraintsInterface
         return new Collection([
             'allowExtraFields' => true,
             'fields' => [
-                'id' => PositiveIntegerVOConstraints::get(),
+                Consts::URL_PARAMS => [
+                    new Collection([
+                        'allowExtraFields' => true,
+                        'fields' => [
+                            'id' => PositiveIntegerVOConstraints::get(),
+                        ],
+                    ]),
+                ],
             ],
         ]);
     }

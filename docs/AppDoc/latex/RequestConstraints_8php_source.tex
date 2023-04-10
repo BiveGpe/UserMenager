@@ -1,0 +1,36 @@
+\hypertarget{RequestConstraints_8php_source}{}\doxysection{Request\+Constraints.\+php}
+\label{RequestConstraints_8php_source}\index{src/Domain/User/GetUserById/RequestConstraints.php@{src/Domain/User/GetUserById/RequestConstraints.php}}
+\mbox{\hyperlink{RequestConstraints_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00003}00003\ declare(strict\_types\ =\ 1);}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceDomain_1_1User_1_1GetUserById}{Domain\(\backslash\)User\(\backslash\)GetUserById}};}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00007}00007\ use\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Set_1_1PositiveIntegerVOConstraints}{Infrastructure\(\backslash\)Common\(\backslash\)Constraints\(\backslash\)Set\(\backslash\)PositiveIntegerVOConstraints}};}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00008}00008\ use\ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ConstraintsInterface}{Infrastructure\(\backslash\)Common\(\backslash\)Interfaces\(\backslash\)ConstraintsInterface}};}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00009}00009\ use\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1RoutingStrategy_1_1Consts}{Infrastructure\(\backslash\)Common\(\backslash\)RoutingStrategy\(\backslash\)Consts}};}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00010}00010\ use\ Symfony\(\backslash\)Component\(\backslash\)Validator\(\backslash\)Constraints\(\backslash\)Collection;}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00012}\mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1RequestConstraints}{00012}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1RequestConstraints}{RequestConstraints}}\ \textcolor{keyword}{implements}\ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ConstraintsInterface}{ConstraintsInterface}}}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00014}\mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1RequestConstraints_adb2304be8e964f02264fd4ed3b6244f3}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \textcolor{keyword}{get}():\ Collection}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Collection([}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'allowExtraFields'}\ =>\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'fields'}\ =>\ [}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Consts::URL\_PARAMS\ =>\ [}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Collection([}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'allowExtraFields'}\ =>\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'fields'}\ =>\ [}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'id'}\ =>\ PositiveIntegerVOConstraints::get(),}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ]),}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ ]);}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RequestConstraints_8php_source_l00030}00030\ \}}
+
+\end{DoxyCode}

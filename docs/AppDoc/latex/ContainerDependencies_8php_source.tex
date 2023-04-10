@@ -1,0 +1,45 @@
+\hypertarget{ContainerDependencies_8php_source}{}\doxysection{Container\+Dependencies.\+php}
+\label{ContainerDependencies_8php_source}\index{App/Settings/ContainerDependencies.php@{App/Settings/ContainerDependencies.php}}
+\mbox{\hyperlink{ContainerDependencies_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00003}00003\ declare(strict\_types\ =\ 1);}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00005}\mbox{\hyperlink{namespaceApp_1_1Settings}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceApp_1_1Settings}{App\(\backslash\)Settings}};}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00007}00007\ use\ DI;}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00008}00008\ use\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1RoutingStrategy_1_1RequestWithArgsAsQueryResponse}{Infrastructure\(\backslash\)Common\(\backslash\)RoutingStrategy\(\backslash\)RequestWithArgsAsQueryResponse}};}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00009}00009\ use\ \mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1Config}{Infrastructure\(\backslash\)RequestMenager\(\backslash\)Config}};}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00010}00010\ use\ \mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1ConfigProvider}{Infrastructure\(\backslash\)RequestMenager\(\backslash\)ConfigProvider}};}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00011}00011\ use\ \mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1RequestMenager}{Infrastructure\(\backslash\)RequestMenager\(\backslash\)RequestMenager}};}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00012}00012\ use\ \mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1Validator}{Infrastructure\(\backslash\)RequestMenager\(\backslash\)Validator}};}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00014}\mbox{\hyperlink{classApp_1_1Settings_1_1ContainerDependencies}{00014}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classApp_1_1Settings_1_1ContainerDependencies}{ContainerDependencies}}}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00015}00015\ \{}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00016}\mbox{\hyperlink{classApp_1_1Settings_1_1ContainerDependencies_a202b2e16f53f1e4196f9d618e8aed96d}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classApp_1_1Settings_1_1ContainerDependencies_a202b2e16f53f1e4196f9d618e8aed96d}{getDependecies}}():\ array}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00017}00017\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ [}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'RequestMenagerConfig'}\ =>\ DI\(\backslash\)factory(\textcolor{keyword}{function}\ ()\ \{}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classApp_1_1Settings_1_1RequestMenagerConfig_a4e1ba99162f0b50914896d7e7f28e748}{RequestMenagerConfig::getConfig}}();}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \}),}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ ConfigProvider::class\ =>\ DI\(\backslash\)factory(\textcolor{keyword}{function}\ (\$config)\ \{}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1ConfigProvider}{ConfigProvider}}(\$config);}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \})-\/>parameter(\textcolor{stringliteral}{'config'},\ DI\(\backslash\)\textcolor{keyword}{get}(\textcolor{stringliteral}{'RequestMenagerConfig'})),}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ Config::class\ =>\ DI\(\backslash\)factory(\textcolor{keyword}{function}\ (\$configProvider)\ \{}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1Config}{Config}}(\$configProvider);}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \})-\/>parameter(\textcolor{stringliteral}{'configProvider'},\ DI\(\backslash\)\textcolor{keyword}{get}(ConfigProvider::class)),}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ RequestMenager::class\ =>\ DI\(\backslash\)Factory(\textcolor{keyword}{function}\ (\$config)\ \{}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1RequestMenager}{RequestMenager}}(}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$config,}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ \mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1Validator}{Validator}}(),}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \})-\/>parameter(\textcolor{stringliteral}{'config'},\ DI\(\backslash\)\textcolor{keyword}{get}(Config::class)),}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ContainerDependencies_8php_source_l00042}00042\ \}}
+
+\end{DoxyCode}

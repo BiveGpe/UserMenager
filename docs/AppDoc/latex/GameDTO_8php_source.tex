@@ -1,0 +1,78 @@
+\hypertarget{GameDTO_8php_source}{}\doxysection{Game\+DTO.\+php}
+\label{GameDTO_8php_source}\index{src/Domain/User/GetUserById/DTO/GameDTO.php@{src/Domain/User/GetUserById/DTO/GameDTO.php}}
+\mbox{\hyperlink{GameDTO_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00003}00003\ declare(strict\_types\ =\ 1);}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00005}\mbox{\hyperlink{namespaceDomain_1_1User_1_1GetUserById_1_1DTO}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceDomain_1_1User_1_1GetUserById_1_1DTO}{Domain\(\backslash\)User\(\backslash\)GetUserById\(\backslash\)DTO}};}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00007}00007\ use\ DateTime;}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00008}00008\ use\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractDTO}{Infrastructure\(\backslash\)Common\(\backslash\)Abstracts\(\backslash\)AbstractDTO}};}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00009}00009\ use\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1ValueObject_1_1PositiveInteger}{Infrastructure\(\backslash\)Common\(\backslash\)ValueObject\(\backslash\)PositiveInteger}};}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00011}\mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO}{00011}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO}{GameDTO}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractDTO}{AbstractDTO}}}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1ValueObject_1_1PositiveInteger}{PositiveInteger}}\ \$id;}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ \$name;}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ \$description;}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{private}\ DateTime\ \$createdAt;}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{private}\ DateTime\ \$updatedAt;}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00023}\mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a40f5a18db2e611fcbac46158458593cb}{00023}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a40f5a18db2e611fcbac46158458593cb}{\_\_construct}}(}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1ValueObject_1_1PositiveInteger}{PositiveInteger}}\ \$id,}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \$name,}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \$description,}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ DateTime\ \$createdAt,}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ DateTime\ \$updatedAt,}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00029}00029\ \ \ \ \ )\ \{}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \$this-\/>\textcolor{keywordtype}{id}\ =\ \$id;}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \$this-\/>name\ =\ \$name;}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \$this-\/>description\ =\ \$description;}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \$this-\/>createdAt\ =\ \$createdAt;}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \$this-\/>updatedAt\ =\ \$updatedAt;}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00037}\mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a3f62efc58278ff5bfac20881b708fbaf}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a3f62efc58278ff5bfac20881b708fbaf}{jsonSerialize}}():\ array}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00038}00038\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ [}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'id'}\ =>\ \$this-\/>\mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a5559d30d78ebddfe04a369e71025a6fe}{getId}}()-\/>getValue(),}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'name'}\ =>\ \$this-\/>\mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a5ea7ad8b580033e933fbaa43c0fa8e6c}{getName}}(),}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'description'}\ =>\ \$this-\/>\mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a1cf7ec8c566505bf3f98c2830cb95ee1}{getDescription}}(),}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'createdAt'}\ =>\ \$this-\/>\mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a3ce7bc2ca394ecbec4de1b6d6735951b}{getCreatedAt}}()-\/>format(\textcolor{stringliteral}{'Y-\/m-\/d\ H:i:s'}),}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'updatedAt'}\ =>\ \$this-\/>\mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a4190d7605484430d358cef07a6a86a22}{getUpdatedAt}}()-\/>format(\textcolor{stringliteral}{'Y-\/m-\/d\ H:i:s'}),}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00048}\mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a5559d30d78ebddfe04a369e71025a6fe}{00048}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a5559d30d78ebddfe04a369e71025a6fe}{getId}}():\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1ValueObject_1_1PositiveInteger}{PositiveInteger}}}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00049}00049\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>id;}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00053}\mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a5ea7ad8b580033e933fbaa43c0fa8e6c}{00053}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a5ea7ad8b580033e933fbaa43c0fa8e6c}{getName}}():\ string}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>name;}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00058}\mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a1cf7ec8c566505bf3f98c2830cb95ee1}{00058}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a1cf7ec8c566505bf3f98c2830cb95ee1}{getDescription}}():\ string}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00059}00059\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>description;}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00063}\mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a3ce7bc2ca394ecbec4de1b6d6735951b}{00063}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a3ce7bc2ca394ecbec4de1b6d6735951b}{getCreatedAt}}():\ DateTime}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00064}00064\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>createdAt;}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00066}00066\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00068}\mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a4190d7605484430d358cef07a6a86a22}{00068}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO_a4190d7605484430d358cef07a6a86a22}{getUpdatedAt}}():\ DateTime}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00069}00069\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>updatedAt;}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GameDTO_8php_source_l00072}00072\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,47 @@
+\hypertarget{CanCreateValueObject_8php_source}{}\doxysection{Can\+Create\+Value\+Object.\+php}
+\label{CanCreateValueObject_8php_source}\index{src/Infrastructure/Common/Constraints/Custom/CanCreateValueObject.php@{src/Infrastructure/Common/Constraints/Custom/CanCreateValueObject.php}}
+\mbox{\hyperlink{CanCreateValueObject_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00003}00003\ declare(strict\_types\ =\ 1);}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00005}\mbox{\hyperlink{namespaceInfrastructure_1_1Common_1_1Constraints_1_1Custom}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceInfrastructure_1_1Common_1_1Constraints_1_1Custom}{Infrastructure\(\backslash\)Common\(\backslash\)Constraints\(\backslash\)Custom}};}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00007}00007\ use\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Validators_1_1CanCreateValueObjectValidator}{Infrastructure\(\backslash\)Common\(\backslash\)Validators\(\backslash\)CanCreateValueObjectValidator}};}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00008}00008\ use\ Symfony\(\backslash\)Component\(\backslash\)Validator\(\backslash\)Constraint;}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00010}\mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject}{00010}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject}{CanCreateValueObject}}\ \textcolor{keyword}{extends}\ Constraint}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00012}\mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject_a8564f45009a37374db860a8eea4b2599}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject_a8564f45009a37374db860a8eea4b2599}{\$message}}\ =\ \textcolor{stringliteral}{'The\ value\ "{}\{\{\ value\ \}\}"{}\ cannot\ be\ used\ to\ create\ a\ \{\{\ class\ \}\}\ object.'};}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00014}\mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject_a081ff4c63d24374f90ed6751773187ef}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject_a081ff4c63d24374f90ed6751773187ef}{\$class}};}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00016}\mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject_a48fd6ac9b486ccebc4716212d53adb75}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject_a48fd6ac9b486ccebc4716212d53adb75}{\_\_construct}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject_a081ff4c63d24374f90ed6751773187ef}{\$class}},\ ?array\ \$options\ =\ \textcolor{keyword}{null},\ ?array\ \$groups\ =\ \textcolor{keyword}{null},\ \$payload\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00017}00017\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \$this-\/>\textcolor{keyword}{class\ }=\ \$class;}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ parent::\_\_construct(\$options\ ??\ [],\ \$groups,\ \$payload);}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00022}\mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject_afbb878698ca3e86dffcdb9e50e443750}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject_afbb878698ca3e86dffcdb9e50e443750}{getTargets}}():\ string}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00023}00023\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ self::PROPERTY\_CONSTRAINT;}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00027}\mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject_a2ab6cc30bf2379a51b84b99e7da19b7c}{00027}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject_a2ab6cc30bf2379a51b84b99e7da19b7c}{getMessage}}():\ string}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00028}00028\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject_a8564f45009a37374db860a8eea4b2599}{\$this-\/>message}};}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00032}\mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject_a415dafad444aab944cb9fa3c8471c65a}{00032}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject_a415dafad444aab944cb9fa3c8471c65a}{getClass}}():\ string}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00033}00033\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject_a081ff4c63d24374f90ed6751773187ef}{\$this-\/>class}};}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00037}\mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject_a79dfd782dadec6a4d67c01587474bde1}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject_a79dfd782dadec6a4d67c01587474bde1}{validatedBy}}():\ string}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00038}00038\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ CanCreateValueObjectValidator::class;}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CanCreateValueObject_8php_source_l00041}00041\ \}}
+
+\end{DoxyCode}

@@ -28,7 +28,10 @@
         "migrate": "php8.1 vendor/bin/phinx migrate",
         "migrate-rollback": "php8.1 vendor/bin/phinx rollback",
         "seed": "php8.1 vendor/bin/phinx seed:run",
-        "phpstan": "php8.1 vendor/bin/phpstan analyse -c phpstan.neon"
+        "phpstan": "php8.1 vendor/bin/phpstan analyse -c phpstan.neon",
+        "openApi": "php8.1 docgen.php",
+        "apidoc": "sudo redocly build-docs docs/openapi.json",
+        "appdoc": "doxygen Doxyfile"
     },
     "autoload": {
         "psr-4": {

@@ -1,0 +1,23 @@
+\hypertarget{AbstractRepository_8php_source}{}\doxysection{Abstract\+Repository.\+php}
+\label{AbstractRepository_8php_source}\index{src/Infrastructure/Common/Abstracts/AbstractRepository.php@{src/Infrastructure/Common/Abstracts/AbstractRepository.php}}
+\mbox{\hyperlink{AbstractRepository_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AbstractRepository_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{AbstractRepository_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{AbstractRepository_8php_source_l00003}00003\ declare(strict\_types\ =\ 1);}
+\DoxyCodeLine{\Hypertarget{AbstractRepository_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{AbstractRepository_8php_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceInfrastructure_1_1Common_1_1Abstracts}{Infrastructure\(\backslash\)Common\(\backslash\)Abstracts}};}
+\DoxyCodeLine{\Hypertarget{AbstractRepository_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{AbstractRepository_8php_source_l00007}00007\ use\ PDO;}
+\DoxyCodeLine{\Hypertarget{AbstractRepository_8php_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{AbstractRepository_8php_source_l00009}\mbox{\hyperlink{classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractRepository}{00009}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractRepository}{AbstractRepository}}}
+\DoxyCodeLine{\Hypertarget{AbstractRepository_8php_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{AbstractRepository_8php_source_l00011}\mbox{\hyperlink{classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractRepository_a620397f60c3d2e7a62c4603515c71959}{00011}}\ \ \ \ \ \textcolor{keyword}{protected}\ PDO\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractRepository_a620397f60c3d2e7a62c4603515c71959}{\$pdo}};}
+\DoxyCodeLine{\Hypertarget{AbstractRepository_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{AbstractRepository_8php_source_l00013}\mbox{\hyperlink{classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractRepository_a564f4140ffbf5bc6883361474a843059}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractRepository_a564f4140ffbf5bc6883361474a843059}{\_\_construct}}()}
+\DoxyCodeLine{\Hypertarget{AbstractRepository_8php_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AbstractRepository_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \$this-\/>pdo\ =\ \textcolor{keyword}{new}\ PDO(\textcolor{stringliteral}{'pgsql:host=192.168.0.69;port=5432;dbname=UserController'},\ \textcolor{stringliteral}{'postgres'},\ \textcolor{stringliteral}{'postgres'});}
+\DoxyCodeLine{\Hypertarget{AbstractRepository_8php_source_l00016}00016\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AbstractRepository_8php_source_l00017}00017\ \}}
+
+\end{DoxyCode}

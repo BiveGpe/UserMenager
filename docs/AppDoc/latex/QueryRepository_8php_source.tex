@@ -1,0 +1,73 @@
+\hypertarget{QueryRepository_8php_source}{}\doxysection{Query\+Repository.\+php}
+\label{QueryRepository_8php_source}\index{src/Domain/User/Repository/QueryRepository.php@{src/Domain/User/Repository/QueryRepository.php}}
+\mbox{\hyperlink{QueryRepository_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00003}00003\ declare(strict\_types\ =\ 1);}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00005}\mbox{\hyperlink{namespaceDomain_1_1User_1_1Repository}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceDomain_1_1User_1_1Repository}{Domain\(\backslash\)User\(\backslash\)Repository}};}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00007}00007\ use\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractRepository}{Infrastructure\(\backslash\)Common\(\backslash\)Abstracts\(\backslash\)AbstractRepository}};}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00008}00008\ use\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1ValueObject_1_1PositiveInteger}{Infrastructure\(\backslash\)Common\(\backslash\)ValueObject\(\backslash\)PositiveInteger}};}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00009}00009\ use\ PDO;}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00011}\mbox{\hyperlink{classDomain_1_1User_1_1Repository_1_1QueryRepository}{00011}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDomain_1_1User_1_1Repository_1_1QueryRepository}{QueryRepository}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractRepository}{AbstractRepository}}}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00013}\mbox{\hyperlink{classDomain_1_1User_1_1Repository_1_1QueryRepository_a9959fff763eccce94a45b813971d595e}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classDomain_1_1User_1_1Repository_1_1QueryRepository_a9959fff763eccce94a45b813971d595e}{getUserById}}(\mbox{\hyperlink{classInfrastructure_1_1Common_1_1ValueObject_1_1PositiveInteger}{PositiveInteger}}\ \$id):\ array}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \$sql\ =\ <<<\textcolor{stringliteral}{'SQL'}}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SELECT}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ id,}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ firstname,}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lastname,}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ username,}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ email,}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ password,}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ created\_at,}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ updated\_at}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FROM}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}user"{}}}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ :\textcolor{keywordtype}{id}}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AND}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ deleted\ =\ \textcolor{keyword}{false}}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>pdo-\/>prepare(\$sql);}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{'id'}\ =>\ \$id-\/>\mbox{\hyperlink{classInfrastructure_1_1Common_1_1ValueObject_1_1PositiveInteger_aa34f403692473fe2d52eba176a08912f}{getValue}}()]);}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00040}00040\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ getUserGames(\mbox{\hyperlink{classInfrastructure_1_1Common_1_1ValueObject_1_1PositiveInteger}{PositiveInteger}}\ \$id):\ array}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00041}00041\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \$sql\ =\ <<<\textcolor{stringliteral}{'SQL'}}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SELECT}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ game.id,}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ game.name,}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ game.description,}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ game.created\_at,}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ game.updated\_at}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FROM}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ game}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ JOIN\ users\_games}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ON\ game.id\ =\ users\_games.game\_id}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ users\_games.user\_id\ =\ :\textcolor{keywordtype}{id}}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AND}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ game.deleted\ =\ \textcolor{keyword}{false}}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AND}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ users\_games.deleted\ =\ \textcolor{keyword}{false}}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ SQL;}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>pdo-\/>prepare(\$sql);}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00063}00063\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{'id'}\ =>\ \$id-\/>\mbox{\hyperlink{classInfrastructure_1_1Common_1_1ValueObject_1_1PositiveInteger_aa34f403692473fe2d52eba176a08912f}{getValue}}()]);}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00066}00066\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{QueryRepository_8php_source_l00067}00067\ \}}
+
+\end{DoxyCode}

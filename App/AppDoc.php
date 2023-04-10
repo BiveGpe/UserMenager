@@ -12,7 +12,8 @@ use Infrastructure\Common\Interfaces\DocInterface;
  *         version="1.0.0",
  *     ),
  *     @OA\Server(
- *         url="http://localhost:8080",
+ *         url="http://192.168.0.69:2137",
+ *         description="Development server",
  *     ),
  * ),
  */

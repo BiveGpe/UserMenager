@@ -1,0 +1,46 @@
+\hypertarget{AppBuilder_8php_source}{}\doxysection{App\+Builder.\+php}
+\label{AppBuilder_8php_source}\index{App/AppBuilder.php@{App/AppBuilder.php}}
+\mbox{\hyperlink{AppBuilder_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00003}00003\ declare(strict\_types\ =\ 1);}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00005}\mbox{\hyperlink{namespaceApp}{00005}}\ \textcolor{keyword}{namespace\ }App;}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00007}00007\ use\ \mbox{\hyperlink{classApp_1_1Initialization_1_1ContainerInit}{App\(\backslash\)Initialization\(\backslash\)ContainerInit}};}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00008}00008\ use\ \mbox{\hyperlink{classApp_1_1Initialization_1_1EnvInit}{App\(\backslash\)Initialization\(\backslash\)EnvInit}};}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00009}00009\ use\ \mbox{\hyperlink{classApp_1_1Initialization_1_1MiddlewareInit}{App\(\backslash\)Initialization\(\backslash\)MiddlewareInit}};}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00010}00010\ use\ \mbox{\hyperlink{classApp_1_1Initialization_1_1RouteInit}{App\(\backslash\)Initialization\(\backslash\)RouteInit}};}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00011}00011\ use\ DI\(\backslash\)Bridge\(\backslash\)Slim\(\backslash\)Bridge;}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00012}00012\ use\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1RoutingStrategy_1_1RequestWithArgsAsQueryResponse}{Infrastructure\(\backslash\)Common\(\backslash\)RoutingStrategy\(\backslash\)RequestWithArgsAsQueryResponse}};}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00013}00013\ use\ Slim\(\backslash\)App;}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00015}\mbox{\hyperlink{classApp_1_1AppBuilder}{00015}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classApp_1_1AppBuilder}{AppBuilder}}}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00016}00016\ \{}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00017}\mbox{\hyperlink{classApp_1_1AppBuilder_acfa16c63c31e051c9e36a81375a678b2}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classApp_1_1AppBuilder_acfa16c63c31e051c9e36a81375a678b2}{build}}():\ App}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00018}00018\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Build\ container\ with\ dependecies}}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \$container\ =\ ContainerInit::buildContainer();}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ initialization\ env\ variables}}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ EnvInit::init(EnvInit::DEFAULT\_ENV);}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Creating\ app\ instance}}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \$app\ =\ Bridge::create(\$container);}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ own\ default\ routing\ strategy}}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \$routeCollector\ =\ \$app-\/>getRouteCollector();}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \$routeCollector-\/>setDefaultInvocationStrategy(\textcolor{keyword}{new}\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1RoutingStrategy_1_1RequestWithArgsAsQueryResponse}{RequestWithArgsAsQueryResponse}}());}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Middleware\ with\ error\ handling}}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ MiddlewareInit::init(\$app);}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Routing}}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ RouteInit::init(\$app);}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$app;}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AppBuilder_8php_source_l00040}00040\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,68 @@
+\hypertarget{ClassStash_8php_source}{}\doxysection{Class\+Stash.\+php}
+\label{ClassStash_8php_source}\index{src/Infrastructure/RequestMenager/ClassStash.php@{src/Infrastructure/RequestMenager/ClassStash.php}}
+\mbox{\hyperlink{ClassStash_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00003}00003\ declare(strict\_types\ =\ 1);}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00005}\mbox{\hyperlink{namespaceInfrastructure_1_1RequestMenager}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceInfrastructure_1_1RequestMenager}{Infrastructure\(\backslash\)RequestMenager}};}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00007}00007\ use\ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ConstraintsInterface}{Infrastructure\(\backslash\)Common\(\backslash\)Interfaces\(\backslash\)ConstraintsInterface}};}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00008}00008\ use\ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1CQFactoryInterface}{Infrastructure\(\backslash\)Common\(\backslash\)Interfaces\(\backslash\)CQFactoryInterface}};}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00009}00009\ use\ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1DocInterface}{Infrastructure\(\backslash\)Common\(\backslash\)Interfaces\(\backslash\)DocInterface}};}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00010}00010\ use\ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ServiceInterface}{Infrastructure\(\backslash\)Common\(\backslash\)Interfaces\(\backslash\)ServiceInterface}};}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00012}\mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1ClassStash}{00012}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1ClassStash}{ClassStash}}}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1DocInterface}{DocInterface}}\ \$doc;}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ConstraintsInterface}{ConstraintsInterface}}\ \$requestConstraints;}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1CQFactoryInterface}{CQFactoryInterface}}\ \$cqFactory;}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ServiceInterface}{ServiceInterface}}\ \$service;}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ConstraintsInterface}{ConstraintsInterface}}\ \$responseConstrains;}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00024}\mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1ClassStash_a3cc9fa912030e7ca9466262dbe08641c}{00024}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1ClassStash_a3cc9fa912030e7ca9466262dbe08641c}{\_\_construct}}(}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1DocInterface}{DocInterface}}\ \$doc,}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ConstraintsInterface}{ConstraintsInterface}}\ \$requestConstrains,}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1CQFactoryInterface}{CQFactoryInterface}}\ \$cqFactory,}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ServiceInterface}{ServiceInterface}}\ \$service,}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ConstraintsInterface}{ConstraintsInterface}}\ \$responseConstrains}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00030}00030\ \ \ \ \ )\ \{}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \$this-\/>doc\ =\ \$doc;}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \$this-\/>requestConstraints\ =\ \$requestConstrains;}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \$this-\/>cqFactory\ =\ \$cqFactory;}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \$this-\/>service\ =\ \$service;}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \$this-\/>responseConstrains\ =\ \$responseConstrains;}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00038}\mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1ClassStash_ab657df2cc6468db2f64ad6bcb8ef47f4}{00038}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1ClassStash_ab657df2cc6468db2f64ad6bcb8ef47f4}{getDoc}}():\ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1DocInterface}{DocInterface}}}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00039}00039\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>doc;}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00043}\mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1ClassStash_a93131b928ce092a1ae6335e6b7ce964e}{00043}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1ClassStash_a93131b928ce092a1ae6335e6b7ce964e}{getRequestConstraints}}():\ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ConstraintsInterface}{ConstraintsInterface}}}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00044}00044\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>requestConstraints;}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00048}\mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1ClassStash_a53a440efc7e57879069b54652203f827}{00048}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1ClassStash_a53a440efc7e57879069b54652203f827}{getCQFactory}}():\ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1CQFactoryInterface}{CQFactoryInterface}}}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00049}00049\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>cqFactory;}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00053}\mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1ClassStash_ab7ec6c709681363e259d4f02ce019e6d}{00053}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1ClassStash_ab7ec6c709681363e259d4f02ce019e6d}{getService}}():\ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ServiceInterface}{ServiceInterface}}}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>service;}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00058}\mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1ClassStash_a52ff0b4e2f206a3a9b7d8bb2463d51c8}{00058}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classInfrastructure_1_1RequestMenager_1_1ClassStash_a52ff0b4e2f206a3a9b7d8bb2463d51c8}{getResponseConstrains}}():\ \mbox{\hyperlink{interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ConstraintsInterface}{ConstraintsInterface}}}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00059}00059\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>responseConstrains;}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ClassStash_8php_source_l00062}00062\ \}}
+
+\end{DoxyCode}

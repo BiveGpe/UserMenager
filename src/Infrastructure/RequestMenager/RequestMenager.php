@@ -4,13 +4,26 @@ declare(strict_types = 1);
 
 namespace Infrastructure\RequestMenager;
 
+use Exception;
 use Infrastructure\Common\Abstracts\AbstractDTO;
 use Slim\Http\ServerRequest;
 
+/**
+ * @description responsible for managing request by getting classes from config, validating request,
+ * creating CQ, DTO and validating it.
+ *
+ */
 class RequestMenager
 {
+    /**
+     * @var Config $config Class responsible for getting classes from config
+     */
     private Config $config;
 
+
+    /**
+     * @var Validator $validator Class responsible for validating docs, request, CQ and DTO
+     */
     private Validator $validator;
 
     public function __construct(
@@ -22,7 +35,7 @@ class RequestMenager
     }
 
     /**
-     * @throws \Exception
+     * @throws Exception
      */
     public function manageRequest(ServerRequest $request): AbstractDTO
     {

@@ -5,6 +5,7 @@ declare(strict_types = 1);
 namespace App\Settings;
 
 use DI;
+use Infrastructure\Common\RoutingStrategy\RequestWithArgsAsQueryResponse;
 use Infrastructure\RequestMenager\Config;
 use Infrastructure\RequestMenager\ConfigProvider;
 use Infrastructure\RequestMenager\RequestMenager;

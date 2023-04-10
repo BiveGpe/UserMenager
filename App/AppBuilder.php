@@ -9,6 +9,7 @@ use App\Initialization\EnvInit;
 use App\Initialization\MiddlewareInit;
 use App\Initialization\RouteInit;
 use DI\Bridge\Slim\Bridge;
+use Infrastructure\Common\RoutingStrategy\RequestWithArgsAsQueryResponse;
 use Slim\App;
 
 class AppBuilder
@@ -23,6 +24,10 @@ class AppBuilder
 
         // Creating app instance
         $app = Bridge::create($container);
+
+        // Set own default routing strategy
+        $routeCollector = $app->getRouteCollector();
+        $routeCollector->setDefaultInvocationStrategy(new RequestWithArgsAsQueryResponse());
 
         // Middleware with error handling
         MiddlewareInit::init($app);

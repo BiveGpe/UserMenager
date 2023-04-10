@@ -4,10 +4,23 @@
         "title": "UserController",
         "version": "1.0.0"
     },
+    "servers": [
+        {
+            "url": "http://192.168.0.69:2137",
+            "description": "Development server"
+        }
+    ],
     "paths": {
         "/api/users": {
             "get": {
                 "summary": "Get all users",
+                "description": "Get all users from database",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "Success"
