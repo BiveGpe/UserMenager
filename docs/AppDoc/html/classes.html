@@ -7,25 +7,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>UserController: Class Index</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript">var page_layout=1;</script>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(document).ready(function() { init_search(); });
-/* @license-end */
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
@@ -36,18 +25,6 @@
    </div>
   </td>
  </tr>
-   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
-          </span>
-        </div>
-</td></tr>
  </tbody>
 </table>
 </div>
@@ -58,22 +35,18 @@
 var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
-</div><!-- top -->
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classes.html',''); initResizable(); });
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
 /* @license-end */
 </script>
-<div id="doc-content">
+<div id="main-nav"></div>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -103,7 +76,7 @@ $(document).ready(function(){initNavTree('classes.html',''); initResizable(); })
 <div class="classindex">
 <dl class="classindex even">
 <dt class="alphachar"><a id="letter_A" name="letter_A">A</a></dt>
-<dd><a class="el" href="classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractDTO.html">AbstractDTO</a> (<a class="el" href="namespaceInfrastructure_1_1Common_1_1Abstracts.html">Infrastructure\Common\Abstracts</a>)</dd><dd><a class="el" href="classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractQuery.html">AbstractQuery</a> (<a class="el" href="namespaceInfrastructure_1_1Common_1_1Abstracts.html">Infrastructure\Common\Abstracts</a>)</dd><dd><a class="el" href="classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractRepository.html">AbstractRepository</a> (<a class="el" href="namespaceInfrastructure_1_1Common_1_1Abstracts.html">Infrastructure\Common\Abstracts</a>)</dd><dd><a class="el" href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html">Action</a> (<a class="el" href="namespaceInfrastructure_1_1Common_1_1ValueObject.html">Infrastructure\Common\ValueObject</a>)</dd><dd><a class="el" href="classApp_1_1AppBuilder.html">App\AppBuilder</a></dd><dd><a class="el" href="classApp_1_1AppDoc.html">App\AppDoc</a></dd><dd><a class="el" href="classInfrastructure_1_1Middleware_1_1Authorization_1_1Authorization.html">Authorization</a> (<a class="el" href="namespaceInfrastructure_1_1Middleware_1_1Authorization.html">Infrastructure\Middleware\Authorization</a>)</dd><dd><a class="el" href="classInfrastructure_1_1Middleware_1_1Authorization_1_1AuthorizationException.html">AuthorizationException</a> (<a class="el" href="namespaceInfrastructure_1_1Middleware_1_1Authorization.html">Infrastructure\Middleware\Authorization</a>)</dd><dd><a class="el" href="classApp_1_1Middleware_1_1AuthorizationMiddleware.html">AuthorizationMiddleware</a> (<a class="el" href="namespaceApp_1_1Middleware.html">App\Middleware</a>)</dd></dl>
+<dd><a class="el" href="classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractDTO.html">AbstractDTO</a> (<a class="el" href="namespaceInfrastructure_1_1Common_1_1Abstracts.html">Infrastructure\Common\Abstracts</a>)</dd><dd><a class="el" href="classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractQuery.html">AbstractQuery</a> (<a class="el" href="namespaceInfrastructure_1_1Common_1_1Abstracts.html">Infrastructure\Common\Abstracts</a>)</dd><dd><a class="el" href="classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractRepository.html">AbstractRepository</a> (<a class="el" href="namespaceInfrastructure_1_1Common_1_1Abstracts.html">Infrastructure\Common\Abstracts</a>)</dd><dd><a class="el" href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html">Action</a> (<a class="el" href="namespaceInfrastructure_1_1Common_1_1ValueObject.html">Infrastructure\Common\ValueObject</a>)</dd><dd><a class="el" href="classTests_1_1Unit_1_1ValueObject_1_1ActionTest.html">ActionTest</a> (<a class="el" href="namespaceTests_1_1Unit_1_1ValueObject.html">Tests\Unit\ValueObject</a>)</dd><dd><a class="el" href="classApp_1_1AppBuilder.html">App\AppBuilder</a></dd><dd><a class="el" href="classApp_1_1AppDoc.html">App\AppDoc</a></dd><dd><a class="el" href="classInfrastructure_1_1Middleware_1_1Authorization_1_1Authorization.html">Authorization</a> (<a class="el" href="namespaceInfrastructure_1_1Middleware_1_1Authorization.html">Infrastructure\Middleware\Authorization</a>)</dd><dd><a class="el" href="classInfrastructure_1_1Middleware_1_1Authorization_1_1AuthorizationException.html">AuthorizationException</a> (<a class="el" href="namespaceInfrastructure_1_1Middleware_1_1Authorization.html">Infrastructure\Middleware\Authorization</a>)</dd><dd><a class="el" href="classApp_1_1Middleware_1_1AuthorizationMiddleware.html">AuthorizationMiddleware</a> (<a class="el" href="namespaceApp_1_1Middleware.html">App\Middleware</a>)</dd></dl>
 <dl class="classindex odd">
 <dt class="alphachar"><a id="letter_C" name="letter_C">C</a></dt>
 <dd><a class="el" href="classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject.html">CanCreateValueObject</a> (<a class="el" href="namespaceInfrastructure_1_1Common_1_1Constraints_1_1Custom.html">Infrastructure\Common\Constraints\Custom</a>)</dd><dd><a class="el" href="classInfrastructure_1_1Common_1_1Validators_1_1CanCreateValueObjectValidator.html">CanCreateValueObjectValidator</a> (<a class="el" href="namespaceInfrastructure_1_1Common_1_1Validators.html">Infrastructure\Common\Validators</a>)</dd><dd><a class="el" href="classInfrastructure_1_1Common_1_1ValueObject_1_1Category.html">Category</a> (<a class="el" href="namespaceInfrastructure_1_1Common_1_1ValueObject.html">Infrastructure\Common\ValueObject</a>)</dd><dd><a class="el" href="classInfrastructure_1_1RequestMenager_1_1ClassStash.html">ClassStash</a> (<a class="el" href="namespaceInfrastructure_1_1RequestMenager.html">Infrastructure\RequestMenager</a>)</dd><dd><a class="el" href="classInfrastructure_1_1RequestMenager_1_1Config.html">Config</a> (<a class="el" href="namespaceInfrastructure_1_1RequestMenager.html">Infrastructure\RequestMenager</a>)</dd><dd><a class="el" href="classInfrastructure_1_1RequestMenager_1_1ConfigProvider.html">ConfigProvider</a> (<a class="el" href="namespaceInfrastructure_1_1RequestMenager.html">Infrastructure\RequestMenager</a>)</dd><dd><a class="el" href="interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ConstraintsInterface.html">ConstraintsInterface</a> (<a class="el" href="namespaceInfrastructure_1_1Common_1_1Interfaces.html">Infrastructure\Common\Interfaces</a>)</dd><dd><a class="el" href="classInfrastructure_1_1Common_1_1RoutingStrategy_1_1Consts.html">Consts</a> (<a class="el" href="namespaceInfrastructure_1_1Common_1_1RoutingStrategy.html">Infrastructure\Common\RoutingStrategy</a>)</dd><dd><a class="el" href="classApp_1_1Settings_1_1ContainerDependencies.html">ContainerDependencies</a> (<a class="el" href="namespaceApp_1_1Settings.html">App\Settings</a>)</dd><dd><a class="el" href="classApp_1_1Initialization_1_1ContainerInit.html">ContainerInit</a> (<a class="el" href="namespaceApp_1_1Initialization.html">App\Initialization</a>)</dd><dd><a class="el" href="interfaceInfrastructure_1_1Common_1_1Interfaces_1_1CQFactoryInterface.html">CQFactoryInterface</a> (<a class="el" href="namespaceInfrastructure_1_1Common_1_1Interfaces.html">Infrastructure\Common\Interfaces</a>)</dd><dd><a class="el" href="interfaceInfrastructure_1_1Common_1_1Interfaces_1_1CQInferface.html">CQInferface</a> (<a class="el" href="namespaceInfrastructure_1_1Common_1_1Interfaces.html">Infrastructure\Common\Interfaces</a>)</dd></dl>
@@ -139,12 +112,9 @@ $(document).ready(function(){initNavTree('classes.html',''); initResizable(); })
 <dd><a class="el" href="classInfrastructure_1_1RequestMenager_1_1Validator.html">Validator</a> (<a class="el" href="namespaceInfrastructure_1_1RequestMenager.html">Infrastructure\RequestMenager</a>)</dd></dl>
 </div>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
 </body>
 </html>

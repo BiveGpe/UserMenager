@@ -1,0 +1,15 @@
+<map id="Domain\User\GetUserById\DTO\GameDTO" name="Domain\User\GetUserById\DTO\GameDTO">
+<area shape="rect" id="node1" title=" " alt="" coords="568,99,761,139"/>
+<area shape="rect" id="node2" href="$classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractDTO.html" title=" " alt="" coords="245,5,418,45"/>
+<area shape="poly" id="edge1" title=" " alt="" coords="422,46,545,80,599,96,597,101,543,85,421,51"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,13,131,38"/>
+<area shape="poly" id="edge2" title=" " alt="" coords="145,23,245,23,245,28,145,28"/>
+<area shape="rect" id="node4" href="$classInfrastructure_1_1Common_1_1ValueObject_1_1PositiveInteger.html" title=" " alt="" coords="228,69,435,109"/>
+<area shape="poly" id="edge3" title=" " alt="" coords="449,97,568,108,567,113,448,102"/>
+<area shape="rect" id="node5" title=" " alt="" coords="49,77,87,102"/>
+<area shape="poly" id="edge4" title=" " alt="" coords="101,87,228,87,228,92,101,92"/>
+<area shape="rect" id="node6" title=" " alt="" coords="302,135,361,161"/>
+<area shape="poly" id="edge5" title=" " alt="" coords="374,146,453,146,544,140,571,136,572,141,544,145,453,151,374,152"/>
+<area shape="rect" id="node7" title=" " alt="" coords="288,195,375,221"/>
+<area shape="poly" id="edge6" title=" " alt="" coords="388,205,463,199,543,181,592,161,633,136,636,141,594,165,545,187,464,204,389,210"/>
+</map>

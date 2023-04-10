@@ -1,0 +1,7 @@
+<map id="Infrastructure\Common\Interfaces\DocInterface" name="Infrastructure\Common\Interfaces\DocInterface">
+<area shape="rect" id="node1" title=" " alt="" coords="60,5,239,45"/>
+<area shape="rect" id="node2" href="$classApp_1_1AppDoc.html" title=" " alt="" coords="5,93,107,119"/>
+<area shape="poly" id="edge1" title=" " alt="" coords="118,56,72,95,68,91,115,52"/>
+<area shape="rect" id="node3" href="$classDomain_1_1User_1_1GetUserById_1_1Doc.html" title=" " alt="" coords="131,93,354,119"/>
+<area shape="poly" id="edge2" title=" " alt="" coords="184,52,230,91,227,95,181,56"/>
+</map>

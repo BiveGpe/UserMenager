@@ -1,0 +1,11 @@
+<map id="Infrastructure\RequestMenager\ClassStash" name="Infrastructure\RequestMenager\ClassStash">
+<area shape="rect" id="node1" title=" " alt="" coords="417,101,641,141"/>
+<area shape="rect" id="node2" href="$interfaceInfrastructure_1_1Common_1_1Interfaces_1_1DocInterface.html" title=" " alt="" coords="29,5,208,45"/>
+<area shape="poly" id="edge1" title=" " alt="" coords="223,32,307,45,394,64,443,80,487,99,485,104,441,85,393,69,306,50,222,38"/>
+<area shape="rect" id="node3" href="$interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ConstraintsInterface.html" title=" " alt="" coords="5,69,232,109"/>
+<area shape="poly" id="edge2" title=" " alt="" coords="246,97,417,110,417,115,245,102"/>
+<area shape="rect" id="node4" href="$interfaceInfrastructure_1_1Common_1_1Interfaces_1_1CQFactoryInterface.html" title=" " alt="" coords="9,133,228,173"/>
+<area shape="poly" id="edge3" title=" " alt="" coords="242,141,417,127,417,133,242,146"/>
+<area shape="rect" id="node5" href="$interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ServiceInterface.html" title=" " alt="" coords="18,197,219,237"/>
+<area shape="poly" id="edge4" title=" " alt="" coords="233,195,393,160,467,139,468,144,394,165,234,200"/>
+</map>

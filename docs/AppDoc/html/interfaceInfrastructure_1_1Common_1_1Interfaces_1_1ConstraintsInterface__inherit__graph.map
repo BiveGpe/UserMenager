@@ -1,0 +1,7 @@
+<map id="Infrastructure\Common\Interfaces\ConstraintsInterface" name="Infrastructure\Common\Interfaces\ConstraintsInterface">
+<area shape="rect" id="node1" title=" " alt="" coords="5,37,232,77"/>
+<area shape="rect" id="node2" href="$classDomain_1_1User_1_1GetUserById_1_1RequestConstraints.html" title=" " alt="" coords="280,5,473,45"/>
+<area shape="poly" id="edge1" title=" " alt="" coords="245,39,279,35,280,40,246,44"/>
+<area shape="rect" id="node3" href="$classDomain_1_1User_1_1GetUserById_1_1ResponseConstraints.html" title=" " alt="" coords="280,69,473,109"/>
+<area shape="poly" id="edge2" title=" " alt="" coords="246,70,280,75,279,80,245,76"/>
+</map>

@@ -1,0 +1,44 @@
+\hypertarget{ActionTest_8php_source}{}\doxysection{Action\+Test.\+php}
+\label{ActionTest_8php_source}\index{tests/Unit/ValueObject/ActionTest.php@{tests/Unit/ValueObject/ActionTest.php}}
+\mbox{\hyperlink{ActionTest_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00003}00003\ declare(strict\_types\ =\ 1);}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00005}\mbox{\hyperlink{namespaceTests_1_1Unit_1_1ValueObject}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceTests_1_1Unit_1_1ValueObject}{Tests\(\backslash\)Unit\(\backslash\)ValueObject}};}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00007}00007\ use\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1ValueObject_1_1Action}{Infrastructure\(\backslash\)Common\(\backslash\)ValueObject\(\backslash\)Action}};}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00008}00008\ use\ InvalidArgumentException;}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00009}00009\ use\ PHPUnit\(\backslash\)Framework\(\backslash\)TestCase;}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00011}\mbox{\hyperlink{classTests_1_1Unit_1_1ValueObject_1_1ActionTest}{00011}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTests_1_1Unit_1_1ValueObject_1_1ActionTest}{ActionTest}}\ \textcolor{keyword}{extends}\ TestCase}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00016}\mbox{\hyperlink{classTests_1_1Unit_1_1ValueObject_1_1ActionTest_a0caccc8a795eb1ab873890ae0c804a36}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classTests_1_1Unit_1_1ValueObject_1_1ActionTest_a0caccc8a795eb1ab873890ae0c804a36}{testSuccess}}(\textcolor{keywordtype}{string}\ \$testData):\ void}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00017}00017\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \$action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1ValueObject_1_1Action}{Action}}(\$testData);}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ self::assertSame(\$testData,\ \$action-\/>getValue());}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00022}\mbox{\hyperlink{classTests_1_1Unit_1_1ValueObject_1_1ActionTest_ada356ec4905e5cff1fb548af22ec38c1}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classTests_1_1Unit_1_1ValueObject_1_1ActionTest_ada356ec4905e5cff1fb548af22ec38c1}{successDataProvider}}():\ array}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00023}00023\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ [}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}GetUserById"{}}],}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00032}\mbox{\hyperlink{classTests_1_1Unit_1_1ValueObject_1_1ActionTest_a07f69bd34455b474a191bda87fa187c1}{00032}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classTests_1_1Unit_1_1ValueObject_1_1ActionTest_a07f69bd34455b474a191bda87fa187c1}{testInvalidArgumentException}}(\textcolor{keywordtype}{string}\ \$testData):\ void}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00033}00033\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ self::expectException(InvalidArgumentException::class);}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \$action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classInfrastructure_1_1Common_1_1ValueObject_1_1Action}{Action}}(\$testData);}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00038}\mbox{\hyperlink{classTests_1_1Unit_1_1ValueObject_1_1ActionTest_a361f756981793e04c7b8eb728a3da8b1}{00038}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classTests_1_1Unit_1_1ValueObject_1_1ActionTest_a361f756981793e04c7b8eb728a3da8b1}{invalidArgumentExceptionDataProvider}}():\ array}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00039}00039\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ [}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}testData"{}}],}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ActionTest_8php_source_l00044}00044\ \}}
+
+\end{DoxyCode}
