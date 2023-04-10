@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loadvalidatormetadata_0',['loadValidatorMetadata',['../classDomain_1_1User_1_1GetUserById_1_1DTO_1_1UserDTO.html#a73518b589ea77c2c54df983935b014be',1,'Domain\User\GetUserById\DTO\UserDTO\loadValidatorMetadata()'],['../classDomain_1_1User_1_1GetUserById_1_1Query.html#ae630028f2242bc461658cf658ba7f9b5',1,'Domain\User\GetUserById\Query\loadValidatorMetadata()']]]
+  ['jsonserialize_0',['jsonSerialize',['../classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO.html#a3f62efc58278ff5bfac20881b708fbaf',1,'Domain\User\GetUserById\DTO\GameDTO\jsonSerialize()'],['../classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTOCollection.html#a15e665f734e4155e6b492bc89f1742eb',1,'Domain\User\GetUserById\DTO\GameDTOCollection\jsonSerialize()'],['../classDomain_1_1User_1_1GetUserById_1_1DTO_1_1UserDTO.html#adfe33b9e796e0ddd582bfdf19f7d0286',1,'Domain\User\GetUserById\DTO\UserDTO\jsonSerialize()']]]
 ];

@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['validate_0',['validate',['../classInfrastructure_1_1Common_1_1Validators_1_1CanCreateValueObjectValidator.html#ad7ee7044523714a0fef7abde0d3b856c',1,'Infrastructure::Common::Validators::CanCreateValueObjectValidator']]],
-  ['validatearraywithconstraints_1',['validateArrayWithConstraints',['../classInfrastructure_1_1Common_1_1Validators_1_1ServiceValidator.html#a93ebf9eaf4b491e3ea87ee56c6422233',1,'Infrastructure::Common::Validators::ServiceValidator']]],
-  ['validatedby_2',['validatedBy',['../classInfrastructure_1_1Common_1_1Constraints_1_1Custom_1_1CanCreateValueObject.html#a79dfd782dadec6a4d67c01587474bde1',1,'Infrastructure::Common::Constraints::Custom::CanCreateValueObject']]],
-  ['validatedoc_3',['validateDoc',['../classInfrastructure_1_1RequestMenager_1_1Validator.html#afdc413f87f703f293385c9e3dba1c3b0',1,'Infrastructure::RequestMenager::Validator']]],
-  ['validateobjectwithmetadata_4',['validateObjectWithMetadata',['../classInfrastructure_1_1RequestMenager_1_1Validator.html#a22d0eb637d1d8fd900f34c39717bef92',1,'Infrastructure::RequestMenager::Validator']]],
-  ['validaterequest_5',['validateRequest',['../classInfrastructure_1_1RequestMenager_1_1Validator.html#a1dd0cdea7b5b3e627067ae07f78452fb',1,'Infrastructure::RequestMenager::Validator']]],
-  ['validator_6',['Validator',['../classInfrastructure_1_1RequestMenager_1_1Validator.html',1,'Infrastructure::RequestMenager']]],
-  ['validator_2ephp_7',['Validator.php',['../Validator_8php.html',1,'']]]
+  ['unauthorized_0',['UNAUTHORIZED',['../classInfrastructure_1_1Middleware_1_1Authorization_1_1AuthorizationException.html#aab65fd7fac06031c2b56dfe0dbe5f92a',1,'Infrastructure::Middleware::Authorization::AuthorizationException']]],
+  ['url_5fparams_1',['URL_PARAMS',['../classInfrastructure_1_1Common_1_1RoutingStrategy_1_1Consts.html#a3901688a0d5ed1b9e478d9d0fc215330',1,'Infrastructure::Common::RoutingStrategy::Consts']]],
+  ['user_2',['USER',['../classInfrastructure_1_1Common_1_1ValueObject_1_1Category.html#a4f1af9d1ea28b649300e44c131a930f1',1,'Infrastructure::Common::ValueObject::Category']]],
+  ['usercontroller_3',['UserController',['../classApp_1_1Controller_1_1UserController.html',1,'App::Controller']]],
+  ['usercontroller_2ephp_4',['UserController.php',['../UserController_8php.html',1,'']]],
+  ['userdto_5',['UserDTO',['../classDomain_1_1User_1_1GetUserById_1_1DTO_1_1UserDTO.html',1,'Domain::User::GetUserById::DTO']]],
+  ['userdto_2ephp_6',['UserDTO.php',['../UserDTO_8php.html',1,'']]]
 ];

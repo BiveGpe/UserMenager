@@ -7,14 +7,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>UserController: src/Infrastructure/Common/ValueObject/Action.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
@@ -25,6 +36,18 @@
    </div>
   </td>
  </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td></tr>
  </tbody>
 </table>
 </div>
@@ -35,17 +58,22 @@
 var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('Action_8php_source.html',''); initResizable(); });
 /* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +95,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7433a7d98e82d2923e770867e49308bb.html">Infrastructure</a></li><li class="navelem"><a class="el" href="dir_39e83f7685274dcbe892a04e798a8486.html">Common</a></li><li class="navelem"><a class="el" href="dir_c06fae6ad0f65bcb09f9fd0530d846ce.html">ValueObject</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">Action.php</div></div>
 </div><!--header-->
@@ -92,32 +115,37 @@ $(function() {
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_variable" href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#a9133ce3bbd6f43ac280dd7b9d356532a">self::GET_USER_BY_ID</a>,</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    ];</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">private</span> <span class="keywordtype">string</span> $value;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#ae2721291a452439a245e54f813a8a2c9">   17</a></span>    <span class="keyword">private</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#ae2721291a452439a245e54f813a8a2c9">$value</a>;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#ae2944dfd67fb43e16e3a7f8bbd4186a8">   19</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#ae2944dfd67fb43e16e3a7f8bbd4186a8">__construct</a>(<span class="keywordtype">string</span> $value)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#ae2944dfd67fb43e16e3a7f8bbd4186a8">   19</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#ae2944dfd67fb43e16e3a7f8bbd4186a8">__construct</a>(<span class="keywordtype">string</span> <a class="code hl_variable" href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#ae2721291a452439a245e54f813a8a2c9">$value</a>)</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">if</span> (!in_array($value, self::ALLOWED_ACTIONS)) {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(sprintf(<span class="stringliteral">&quot;There is no such category as %s&quot;</span>, $value)); <span class="comment">// TODO: Own exception</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">if</span> (!in_array(<a class="code hl_variable" href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#ae2721291a452439a245e54f813a8a2c9">$value</a>, self::ALLOWED_ACTIONS)) {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(sprintf(<span class="stringliteral">&quot;There is no such category as %s&quot;</span>, <a class="code hl_variable" href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#ae2721291a452439a245e54f813a8a2c9">$value</a>)); <span class="comment">// TODO: Own exception</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        $this-&gt;value = $value;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        $this-&gt;value = <a class="code hl_variable" href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#ae2721291a452439a245e54f813a8a2c9">$value</a>;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#a9d180f5cd910f2857fc1029fe0395192">   28</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#a9d180f5cd910f2857fc1029fe0395192">getValue</a>(): string</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">return</span> $this-&gt;value;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#ae2721291a452439a245e54f813a8a2c9">$this-&gt;value</a>;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
 <div class="ttc" id="aclassInfrastructure_1_1Common_1_1ValueObject_1_1Action_html"><div class="ttname"><a href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html">Infrastructure\Common\ValueObject\Action</a></div><div class="ttdef"><b>Definition:</b> <a href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#l00009">Action.php:10</a></div></div>
 <div class="ttc" id="aclassInfrastructure_1_1Common_1_1ValueObject_1_1Action_html_a9133ce3bbd6f43ac280dd7b9d356532a"><div class="ttname"><a href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#a9133ce3bbd6f43ac280dd7b9d356532a">Infrastructure\Common\ValueObject\Action\GET_USER_BY_ID</a></div><div class="ttdeci">const GET_USER_BY_ID</div><div class="ttdef"><b>Definition:</b> <a href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#l00011">Action.php:11</a></div></div>
 <div class="ttc" id="aclassInfrastructure_1_1Common_1_1ValueObject_1_1Action_html_a9d180f5cd910f2857fc1029fe0395192"><div class="ttname"><a href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#a9d180f5cd910f2857fc1029fe0395192">Infrastructure\Common\ValueObject\Action\getValue</a></div><div class="ttdeci">getValue()</div><div class="ttdef"><b>Definition:</b> <a href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#l00028">Action.php:28</a></div></div>
 <div class="ttc" id="aclassInfrastructure_1_1Common_1_1ValueObject_1_1Action_html_aa46a309c3bb9e21bdbba4393e67262e2"><div class="ttname"><a href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#aa46a309c3bb9e21bdbba4393e67262e2">Infrastructure\Common\ValueObject\Action\ALLOWED_ACTIONS</a></div><div class="ttdeci">const ALLOWED_ACTIONS</div><div class="ttdef"><b>Definition:</b> <a href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#l00013">Action.php:13</a></div></div>
+<div class="ttc" id="aclassInfrastructure_1_1Common_1_1ValueObject_1_1Action_html_ae2721291a452439a245e54f813a8a2c9"><div class="ttname"><a href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#ae2721291a452439a245e54f813a8a2c9">Infrastructure\Common\ValueObject\Action\$value</a></div><div class="ttdeci">string $value</div><div class="ttdef"><b>Definition:</b> <a href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#l00017">Action.php:17</a></div></div>
 <div class="ttc" id="aclassInfrastructure_1_1Common_1_1ValueObject_1_1Action_html_ae2944dfd67fb43e16e3a7f8bbd4186a8"><div class="ttname"><a href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#ae2944dfd67fb43e16e3a7f8bbd4186a8">Infrastructure\Common\ValueObject\Action\__construct</a></div><div class="ttdeci">__construct(string $value)</div><div class="ttdef"><b>Definition:</b> <a href="classInfrastructure_1_1Common_1_1ValueObject_1_1Action.html#l00019">Action.php:19</a></div></div>
 <div class="ttc" id="anamespaceInfrastructure_1_1Common_1_1ValueObject_html"><div class="ttname"><a href="namespaceInfrastructure_1_1Common_1_1ValueObject.html">Infrastructure\Common\ValueObject</a></div><div class="ttdef"><b>Definition:</b> <a href="namespaceInfrastructure_1_1Common_1_1ValueObject.html#l00005">Action.php:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7433a7d98e82d2923e770867e49308bb.html">Infrastructure</a></li><li class="navelem"><a class="el" href="dir_39e83f7685274dcbe892a04e798a8486.html">Common</a></li><li class="navelem"><a class="el" href="dir_c06fae6ad0f65bcb09f9fd0530d846ce.html">ValueObject</a></li><li class="navelem"><a class="el" href="Action_8php.html">Action.php</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+  </ul>
+</div>
 </body>
 </html>

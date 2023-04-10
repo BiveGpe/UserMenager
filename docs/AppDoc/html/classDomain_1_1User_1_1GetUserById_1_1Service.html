@@ -7,14 +7,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>UserController: Domain\User\GetUserById\Service Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
@@ -25,6 +36,18 @@
    </div>
   </td>
  </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td></tr>
  </tbody>
 </table>
 </div>
@@ -35,17 +58,22 @@
 var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('classDomain_1_1User_1_1GetUserById_1_1Service.html',''); initResizable(); });
 /* @license-end */
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,14 +95,10 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>Domain</b></li><li class="navelem"><b>User</b></li><li class="navelem"><a class="el" href="namespaceDomain_1_1User_1_1GetUserById.html">GetUserById</a></li><li class="navelem"><a class="el" href="classDomain_1_1User_1_1GetUserById_1_1Service.html">Service</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classDomain_1_1User_1_1GetUserById_1_1Service-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Domain\User\GetUserById\Service Class Reference</div></div>
 </div><!--header-->
@@ -97,6 +121,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a250618f0c843e83051dd137874a258e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae09237a1319781432cf42e41d1f87024"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ServiceInterface.html#ae09237a1319781432cf42e41d1f87024">getDTO</a> (<a class="el" href="interfaceInfrastructure_1_1Common_1_1Interfaces_1_1CQInferface.html">CQInferface</a> $cq, <a class="el" href="interfaceInfrastructure_1_1Common_1_1Interfaces_1_1ConstraintsInterface.html">ConstraintsInterface</a> $constraints)</td></tr>
 <tr class="separator:ae09237a1319781432cf42e41d1f87024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a811246891e19784df0eb008b56029480"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDomain_1_1User_1_1Repository_1_1QueryRepository.html">QueryRepository</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomain_1_1User_1_1GetUserById_1_1Service.html#a811246891e19784df0eb008b56029480">$repository</a></td></tr>
+<tr class="separator:a811246891e19784df0eb008b56029480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2bd68a5f0c7158779b05bcaa7328f14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDomain_1_1User_1_1GetUserById_1_1DTOFactory.html">DTOFactory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomain_1_1User_1_1GetUserById_1_1Service.html#ab2bd68a5f0c7158779b05bcaa7328f14">$DTOFactory</a></td></tr>
+<tr class="separator:ab2bd68a5f0c7158779b05bcaa7328f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a624a9894f18b6653470f184a2a1d5d86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInfrastructure_1_1Common_1_1Validators_1_1ServiceValidator.html">ServiceValidator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomain_1_1User_1_1GetUserById_1_1Service.html#a624a9894f18b6653470f184a2a1d5d86">$validator</a></td></tr>
+<tr class="separator:a624a9894f18b6653470f184a2a1d5d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -165,13 +198,90 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab2bd68a5f0c7158779b05bcaa7328f14" name="ab2bd68a5f0c7158779b05bcaa7328f14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2bd68a5f0c7158779b05bcaa7328f14">&#9670;&#160;</a></span>$DTOFactory</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDomain_1_1User_1_1GetUserById_1_1DTOFactory.html">DTOFactory</a> Domain\User\GetUserById\Service::$DTOFactory</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Service_8php_source.html#l00018">18</a> of file <a class="el" href="Service_8php_source.html">Service.php</a>.</p>
+
+</div>
+</div>
+<a id="a811246891e19784df0eb008b56029480" name="a811246891e19784df0eb008b56029480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a811246891e19784df0eb008b56029480">&#9670;&#160;</a></span>$repository</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDomain_1_1User_1_1Repository_1_1QueryRepository.html">QueryRepository</a> Domain\User\GetUserById\Service::$repository</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Service_8php_source.html#l00016">16</a> of file <a class="el" href="Service_8php_source.html">Service.php</a>.</p>
+
+</div>
+</div>
+<a id="a624a9894f18b6653470f184a2a1d5d86" name="a624a9894f18b6653470f184a2a1d5d86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a624a9894f18b6653470f184a2a1d5d86">&#9670;&#160;</a></span>$validator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classInfrastructure_1_1Common_1_1Validators_1_1ServiceValidator.html">ServiceValidator</a> Domain\User\GetUserById\Service::$validator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Service_8php_source.html#l00020">20</a> of file <a class="el" href="Service_8php_source.html">Service.php</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/Domain/User/GetUserById/<a class="el" href="Service_8php_source.html">Service.php</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Domain</b></li><li class="navelem"><b>User</b></li><li class="navelem"><a class="el" href="namespaceDomain_1_1User_1_1GetUserById.html">GetUserById</a></li><li class="navelem"><a class="el" href="classDomain_1_1User_1_1GetUserById_1_1Service.html">Service</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+  </ul>
+</div>
 </body>
 </html>
