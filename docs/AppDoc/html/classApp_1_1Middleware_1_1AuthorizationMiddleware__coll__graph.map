@@ -1,9 +1,0 @@
-<map id="App\Middleware\AuthorizationMiddleware" name="App\Middleware\AuthorizationMiddleware">
-<area shape="rect" id="node1" title=" " alt="" coords="27,196,246,236"/>
-<area shape="rect" id="node2" href="$classInfrastructure_1_1Middleware_1_1Authorization_1_1Authorization.html" title=" " alt="" coords="35,93,239,133"/>
-<area shape="poly" id="edge1" title=" " alt="" coords="139,147,139,196,134,196,134,147"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,63,31"/>
-<area shape="poly" id="edge2" title=" " alt="" coords="32,44,33,57,38,68,50,81,65,91,62,96,46,85,33,71,28,58,27,44"/>
-<area shape="rect" id="node4" title=" " alt="" coords="210,5,269,31"/>
-<area shape="poly" id="edge3" title=" " alt="" coords="231,44,212,71,179,95,176,91,208,67,227,41"/>
-</map>

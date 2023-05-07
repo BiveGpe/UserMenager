@@ -1,9 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,45,131,70"/>
-<area shape="rect" id="node2" href="$classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractDTO.html" title=" " alt="" coords="179,37,352,77"/>
-<area shape="poly" id="edge1" title=" " alt="" coords="144,55,179,55,179,60,144,60"/>
-<area shape="rect" id="node3" href="$classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO.html" title=" " alt="" coords="400,5,593,45"/>
-<area shape="poly" id="edge2" title=" " alt="" coords="366,41,399,36,400,41,366,46"/>
-<area shape="rect" id="node4" href="$classDomain_1_1User_1_1GetUserById_1_1DTO_1_1UserDTO.html" title=" " alt="" coords="400,69,593,109"/>
-<area shape="poly" id="edge3" title=" " alt="" coords="366,69,400,73,399,79,366,74"/>
-</map>

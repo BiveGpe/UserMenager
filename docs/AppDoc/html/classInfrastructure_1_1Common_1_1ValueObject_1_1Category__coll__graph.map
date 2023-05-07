@@ -1,7 +1,0 @@
-<map id="Infrastructure\Common\ValueObject\Category" name="Infrastructure\Common\ValueObject\Category">
-<area shape="rect" id="node1" title=" " alt="" coords="35,108,209,148"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,63,31"/>
-<area shape="poly" id="edge1" title=" " alt="" coords="31,44,31,64,38,83,49,95,63,106,60,110,45,99,33,85,26,65,26,44"/>
-<area shape="rect" id="node3" title=" " alt="" coords="181,5,239,31"/>
-<area shape="poly" id="edge2" title=" " alt="" coords="205,45,196,65,183,86,156,110,153,106,179,82,191,63,200,42"/>
-</map>

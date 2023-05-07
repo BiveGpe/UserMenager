@@ -1,7 +1,0 @@
-<map id="Domain\User\GetUserById\DTO\UserDTO" name="Domain\User\GetUserById\DTO\UserDTO">
-<area shape="rect" id="node1" title=" " alt="" coords="5,167,199,207"/>
-<area shape="rect" id="node2" href="$classInfrastructure_1_1Common_1_1Abstracts_1_1AbstractDTO.html" title=" " alt="" coords="15,79,189,119"/>
-<area shape="poly" id="edge1" title=" " alt="" coords="105,133,105,166,99,166,99,133"/>
-<area shape="rect" id="node3" title=" " alt="" coords="39,5,165,31"/>
-<area shape="poly" id="edge2" title=" " alt="" coords="105,44,105,79,99,79,99,44"/>
-</map>

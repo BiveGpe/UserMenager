@@ -1,9 +1,0 @@
-<map id="Infrastructure\RequestMenager\Config" name="Infrastructure\RequestMenager\Config">
-<area shape="rect" id="node1" title=" " alt="" coords="22,299,246,339"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,101,63,126"/>
-<area shape="poly" id="edge1" title=" " alt="" coords="29,140,23,169,20,204,24,240,38,273,49,286,64,296,61,301,46,290,33,276,19,242,15,204,18,169,24,139"/>
-<area shape="rect" id="node3" href="$classInfrastructure_1_1RequestMenager_1_1ConfigProvider.html" title=" " alt="" coords="122,93,346,133"/>
-<area shape="poly" id="edge2" title=" " alt="" coords="238,148,233,210,223,245,207,276,194,290,180,301,176,296,191,286,202,273,218,243,227,209,233,147"/>
-<area shape="rect" id="node4" title=" " alt="" coords="206,5,262,31"/>
-<area shape="poly" id="edge3" title=" " alt="" coords="237,44,237,93,231,93,231,44"/>
-</map>

@@ -1,4 +1,0 @@
-var dir_18733039534491031be4e2cbb378ce25 =
-[
-    [ "Authorization", "dir_65730d016b1e282b83ce2b043692f659.html", "dir_65730d016b1e282b83ce2b043692f659" ]
-];

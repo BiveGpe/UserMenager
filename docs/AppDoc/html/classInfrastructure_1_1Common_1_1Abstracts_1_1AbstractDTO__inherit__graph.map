@@ -1,9 +1,0 @@
-<map id="Infrastructure\Common\Abstracts\AbstractDTO" name="Infrastructure\Common\Abstracts\AbstractDTO">
-<area shape="rect" id="node1" title=" " alt="" coords="123,79,297,119"/>
-<area shape="rect" id="node3" href="$classDomain_1_1User_1_1GetUserById_1_1DTO_1_1GameDTO.html" title=" " alt="" coords="5,167,199,207"/>
-<area shape="poly" id="edge2" title=" " alt="" coords="177,129,128,169,124,164,174,125"/>
-<area shape="rect" id="node4" href="$classDomain_1_1User_1_1GetUserById_1_1DTO_1_1UserDTO.html" title=" " alt="" coords="223,167,416,207"/>
-<area shape="poly" id="edge3" title=" " alt="" coords="247,125,297,164,293,169,243,129"/>
-<area shape="rect" id="node2" title=" " alt="" coords="147,5,273,31"/>
-<area shape="poly" id="edge1" title=" " alt="" coords="213,44,213,79,207,79,207,44"/>
-</map>
