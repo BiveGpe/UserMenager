@@ -1,3 +1,8 @@
+### v0.6 ###
+* Adds api documentation
+* Adds app documentation
+* Adds own routing strategy to send url params as query params
+
 ### v0.5.3 ###
 * Phpstan with config file and level 1
 
