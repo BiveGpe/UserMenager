@@ -1,3 +1,7 @@
+### v0.6 ###
+* Adds api documentation
+* Adds app documentation
+
 ### v0.5.3 ###
 * Phpstan with config file and level 1
 
